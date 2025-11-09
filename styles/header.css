@@ -68,8 +68,6 @@ header {
         border-radius: 8px;
         background-color: transparent;
         transition: all 0.3s ease;
-      }
-      a {
         font-style: normal;
         text-decoration: none;
         font-weight: 500;
@@ -77,6 +75,8 @@ header {
         line-height: 24px;
         color: #ffffff;
       }
+      
+  
       button:hover {
         background-color: rgba(255, 255, 255, 0.2);
       }
