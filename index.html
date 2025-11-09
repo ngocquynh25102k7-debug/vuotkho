@@ -67,71 +67,10 @@
     </div>
     </section>
   </div>
-  <script>
-document.querySelectorAll('.carousel').forEach(carousel => {
-  const track = carousel.querySelector('.carousel-track');
-  const cards = Array.from(track.children);
-  const nextBtn = carousel.querySelector('.next');
-  const prevBtn = carousel.querySelector('.prev');
-  const gap = 20;
-  let currentIndex = 0; // bắt đầu từ card đầu tiên
-  let autoSlide;
-
-  function updateCards() {
-    const trackWidth = track.offsetWidth;
-    const cardWidth = cards[0].offsetWidth;
-
-    cards.forEach((card, i) => {
-      card.classList.remove('active');
-      card.style.opacity = "0.6";
-      card.style.transform = "scale(0.8)";
-      card.style.zIndex = "1";
-    });
-
-    // Card trung tâm
-    const activeCard = cards[currentIndex];
-    activeCard.classList.add('active');
-    activeCard.style.opacity = "1";
-    activeCard.style.zIndex = "2";
-
-    // Dịch track để card active nằm giữa
-    const offset = (trackWidth / 2) - (cardWidth / 2) - (cardWidth + gap) * currentIndex;
-    track.style.transform = `translateX(${offset}px)`;
-  }
-
-  function nextCard() {
-    currentIndex = (currentIndex + 1) % cards.length;
-    updateCards();
-  }
-
-  function prevCard() {
-    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-    updateCards();
-  }
-
-  // Nút điều hướng
-  nextBtn.addEventListener('click', () => { nextCard(); resetAutoSlide(); });
-  prevBtn.addEventListener('click', () => { prevCard(); resetAutoSlide(); });
-
-  // Auto slide
-  function startAutoSlide() { autoSlide = setInterval(nextCard, 3000); }
-  function resetAutoSlide() { clearInterval(autoSlide); startAutoSlide(); }
-
-  // Hover dừng
-  carousel.addEventListener('mouseenter', () => clearInterval(autoSlide));
-  carousel.addEventListener('mouseleave', startAutoSlide);
-
-  // Khởi tạo
-  updateCards();
-  startAutoSlide();
-});
-
-
-</script>
     </main>
     <footer>    
 
     </footer>
 </body>
-
+<script src="main.js"></script>
 </html>
