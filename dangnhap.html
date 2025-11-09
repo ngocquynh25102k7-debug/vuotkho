@@ -3,14 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/dangnhap.css">
     <title>Document</title>
 </head>
 <body>
     <header>
         
     </header>
-    <main>
+    <script src="./js/header.js" ></script>
+    <main class="auth-wrapper">
+        <div class="auth-container">
+            <div class="auth-left">
+                <img src="assets/images/pages/dangnhap/background.png" class="logo-color">
+            </div>
 
+            <div class="auth-box">
+                <form>
+                    <div class="login-container">
+                        <h1> ĐĂNG NHẬP </h1>
+                        <div class="form-row">
+                            <label class="username"> Tên tài khoản </label>
+                            <input type="text" class="input-field" placeholder="*****************">
+                    </div>
+                    <div class="form-row">
+                        <label class="password"> Mật khẩu </label>
+                        <input type="password" class="input-field" placeholder="*****************">
+                    </div>
+                    </div>
+            <div class="auth-box">
+                    <div class="checkbox-row forgot-password">
+                        <a href="#" class="color-btn-password"> Quên mật khẩu?</a>
+                    </div>
+                    <div class="checkbox-row">
+                        <label class="checkbox"><input type="checkbox"> Lưu thông tin </label>
+                    </div>
+            </div>
+                    <button class="btn-login"> Đăng nhập </button>
+                    <div class="divider">Hoặc</div>
+
+                    <button type="button" class="btn-google">
+                        <img src="assets/images/pages/dangnhap/gg.png" alt="Google" class="icon-gg"> Đăng nhập bằng Google </button>
+                    <div class="register-row"> Chưa có tài khoản? <a href="#"> Đăng ký </a></div>
+                </form>
+            </div>
+        </div>
     </main>
 </body>
 </html>
