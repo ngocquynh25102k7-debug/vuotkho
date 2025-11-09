@@ -12,7 +12,7 @@ let headerInnerHTML = `<div class="wrapper">
                         <li class="nav_bar"><a href="#">Giao dịch</a></li>
                     </ul>
                 </nav>
-                <button onclick="windows.location.href ='./dangky.html'">Đăng ký</button>
+                <button onclick="window.location.href ='./dangky.html'">Đăng ký</button>
             </div>
         </div>
 `;
