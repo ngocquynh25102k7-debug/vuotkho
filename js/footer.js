@@ -1,6 +1,6 @@
 
 let footerInnerHTML = ` <div class="logo">
-            <img src="./assets/images/pages/trangchu/logo_footer.png" alt="logo" class="img">
+            <img src="./assets/images/pages/trangchu/logo_footer.png" alt="logo">
             <div class="text">VƯỢT KHÓ</div>
         </div>
         <div class="infor">
