@@ -27,18 +27,20 @@ h1 {
     height: 77px;
     color: #3877CF;
     font-family: 'Inter', sans-serif;
-    margin-top: 30px;
+    margin: 30px;
     white-space: nowrap;
 }
 .auth-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
 }
 .logo-color {
     background: #DDEAFF;
-    width: 615px;
-    height: 410px;
+    width: 80%;
 }
 .auth-container {
     width: 100%;
@@ -51,14 +53,16 @@ h1 {
     justify-content: center;
     background: #DDEAFF;
     align-items: center;
+    width: 60%;
+    height: 733px;
 }
 .auth-box {
-    width: 90%;
-    max-width: 739px;
+    width: 50%;
 }
 form {
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 .login-container {
     display: flex;
@@ -77,7 +81,7 @@ form {
     color: #181818;
 }
 .username {
-    height: 39px;
+    height: 53px;
     align-items: center;
 }
 .password {
@@ -91,10 +95,9 @@ form {
 }
 .input-field {
     width: 95%;
-    padding: 9px 8px;
+    padding: 9px 35px;
     border-radius: 8px;
     border: 1px solid #00000040;
-    box-shadow: 0px 4px 10px 0px #00000040;
     outline: none;
     font-size: 16px;
     background: transparent;
@@ -109,14 +112,20 @@ form {
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
-    margin: 12px 0;
 }
 .forgot-password {
     display: flex;
     justify-content: flex-end;
 }
+.size {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 .color-btn-password {
     color: #ABABAB;
+    text-decoration: none;
 }
 .btn-login {
     width: 95%;
@@ -130,14 +139,24 @@ form {
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
 }
-
-.btn-login:hover {
-    background: #588fd7;
-}
 .divider {
-  text-align: center;
-  margin: 20px 0;
-  color: #999;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999;
+    width: 95%;
+}
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #999; 
+}
+.divider:not(:empty)::before {
+    margin-right: .75em;
+}
+.divider:not(:empty)::after {
+    margin-left: .75em;
 }
 .btn-google {
   display: flex;
@@ -157,7 +176,6 @@ form {
 }
 .register-row {
     text-align: center;
-    margin-top: 12px;
     font-size: 14px;
 }
 

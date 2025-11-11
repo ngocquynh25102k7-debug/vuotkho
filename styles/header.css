@@ -1,9 +1,10 @@
 header {
   font-family: "Inter", sans-serif;
   width: 100%;
-   margin: 0 auto;
 }
 header .wrapper {
+  max-width: 1440px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,7 +89,6 @@ header .wrapper {
   color: #ffffff;
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px;
   cursor: pointer;
   position: relative;
   overflow: hidden;

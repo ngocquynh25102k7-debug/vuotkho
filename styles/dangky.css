@@ -1,12 +1,7 @@
 
-header {
-    width: 100%;
-    height: 70px;
-    background-color: #3382D0;
-}
-
 .section {
     width: 100%;
+
     .wrapper {
         width: 100%;
         height: 906px;
@@ -81,7 +76,8 @@ header {
                             border: 1px solid hsla(0, 0%, 0%, 0.25);
                             padding-left: 20px;
                         }
-                        p{
+
+                        p {
                             width: 223px;
                             height: 39px;
                             display: flex;
@@ -126,6 +122,12 @@ header {
                     cursor: pointer;
                 }
 
+                .button--register:hover {
+                    background-color: #6ea6df;
+                    box-shadow: 0 0 5px #6ea6df;
+                    transform: scale(1.01);
+                }
+
                 .or {
                     width: 503px;
                     height: 24px;
@@ -165,26 +167,36 @@ header {
                     justify-content: center;
                     gap: 16px;
                     cursor: pointer;
-
-                    img {
-                        width: 42px;
-                        height: 42.7px;
-                    }
                 }
 
-                .end {
-                    width: 503px;
-                    height: 18px;
-                    display: flex;
-                    gap: 2px;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 12px;
+                .button--gg:hover {
+                    box-shadow: 0 0 5px #d7d7d7;
+                    transform: scale(1.01);
+                }
 
-                    a {
-                        color: #F80E0E;
-                        text-decoration: none;
-                    }
+                img {
+                    width: 42px;
+                    height: 42.7px;
+                }
+            }
+
+            .end {
+                width: 503px;
+                height: 18px;
+                display: flex;
+                gap: 2px;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+
+                a {
+                    color: #F80E0E;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: #ff0000;
+                    transform: scale(1.01);
                 }
             }
         }
