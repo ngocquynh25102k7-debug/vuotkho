@@ -14,7 +14,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    img {
+    .img {
       gap: 10px;
       width: 134px;
       height: 144px;
