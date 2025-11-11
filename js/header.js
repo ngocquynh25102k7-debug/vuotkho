@@ -1,4 +1,12 @@
 
+const currentPage = window.location.pathname.split("/").pop();
+const buttonText = currentPage === "dangky.html" ? "Đăng nhập" : "Đăng ký";
+const buttonLink = currentPage === "dangky.html" ? "./dangnhap.html" : "./dangky.html";
+
+// Hàm kiểm tra trang hiện tại để set active
+const isActivePage = (pageName) => {
+    return currentPage === pageName ? "active" : "";
+};
 let headerInnerHTML = `<div class="wrapper">
             <div class="logo">
                 <img src="./assets/images/pages/trangchu/logo.png" alt="logo">
@@ -7,12 +15,12 @@ let headerInnerHTML = `<div class="wrapper">
             <div class="nav_button">
                 <nav>
                     <ul>
-                        <li class="nav_bar"><a href="index.html" class="active">Trang chủ</a></li>
-                        <li class="nav_bar"><a href="#">Bài đăng</a></li>
-                        <li class="nav_bar"><a href="#">Giao dịch</a></li>
+                         <li class="nav_bar"><a href="index.html" class="${isActivePage('index.html')}">Trang chủ</a></li>
+                        <li class="nav_bar"><a href="post.html" class="${isActivePage('post.html')}">Bài đăng</a></li>
+                        <li class="nav_bar"><a href="#" class="${isActivePage('transactions.html')}">Giao dịch</a></li>
                     </ul>
                 </nav>
-                <button onclick="window.location.href ='./dangky.html'">Đăng ký</button>
+               <button onclick="window.location.href='${buttonLink}'">${buttonText}</button>
             </div>
         </div>
 `;
