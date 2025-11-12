@@ -37,6 +37,7 @@
   color: #3382D0;
   background: none;
   border-radius: 8px;
+  cursor: pointer;
 }
 .search-bar {
   display: flex;
@@ -63,9 +64,10 @@
   padding: 10px 15px;
   font-size: 16px;
   font-weight: 400;
+}
+input::placeholder {
   color: #C2C1C1;
 }
-
 .search-box button {
   width: 98px;
   height: 68px;
@@ -111,6 +113,7 @@
   transition: 0.2s;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
 }
 .top-menu li:hover {
   background: #7ea8ff;
@@ -186,6 +189,7 @@
   opacity: 0.5;
   transform: scale(0.8) rotateY(0deg);
   transition: transform 0.6s ease, opacity 0.6s ease;
+  cursor: pointer;
 }
 
 .card.active {
