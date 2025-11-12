@@ -101,7 +101,7 @@ header .wrapper {
 
 /* Button hover effect (chỉ đổi màu, không di chuyển) */
 .nav_button button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -119,4 +119,144 @@ header .wrapper {
 
 .nav_button button:active {
   background: rgba(255, 255, 255, 0.8);
+}
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* circular icon buttons */
+.nav_button button.icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.8px solid rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+.nav_button button.icon-circle:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* keep user-menu hidden by default; styled earlier */
+#user-menu {
+  display: none;
+}
+/* Wrapper chứa 2 nút và menu */
+.user-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+/* Menu thả xuống */
+/* --- MENU THẢ XUỐNG (dropdown) --- */
+#user-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: calc(100% + 8px); /* cách 8px dưới cụm nút */
+  right: 0;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 17px 23px;
+  width: 251px;
+  height: 135px;
+  z-index: 999;
+}
+
+/* --- PHẦN USER INFO (ảnh, tên, email) --- */
+#user-menu .user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+#user-menu .user-info .avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #88b6e5cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+/* --- PHẦN TÊN & EMAIL --- */
+#user-menu .user-info .user-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+}
+
+#user-menu .user-info .user-name strong {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+#user-menu .user-info .user-email {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #575757;
+}
+
+/* --- NÚT MENU --- */
+#user-menu .menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5px;
+}
+
+#user-menu .menu-buttons .menu-item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  width: 100%;
+  padding: 2px;
+  background: none;
+  border: none;
+  text-align: left;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  display: flex;
+  gap: 5px;
+}
+#user-menu .menu-buttons .menu-item#btn-logout {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  width: 100%;
+  padding: 2px 4.5px;
+  background: none;
+  border: none;
+  text-align: left;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  display: flex;
+  gap: 5px;
+}
+#user-menu .menu-buttons .menu-item:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
