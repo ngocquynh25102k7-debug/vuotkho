@@ -199,12 +199,16 @@
 }
 
 .hero-list {
-    height: 1458px;
+    height: 1418px;
     width: 1258px;
-    padding: 20px 40px;
+    padding: 40px 40px;
     background-color: #E9F0FF;
     border-radius: 16px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    
 }
 
 .item {
@@ -339,6 +343,10 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 
 }
+.hero-title{
+    height: 58px;
+    width: 454px;
+}
 
 .hero-title p {
     font-size: 48px;
@@ -346,14 +354,14 @@
 }
 
 .hero-card-track {
-    height: 1314px;
+    height: 1154px;
     display: flex;
     gap: 65.5px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     column-gap: 65.5px;
-    row-gap: 100px;
+    row-gap: 40px;
 }
 .btn {
   display: inline-flex; 
