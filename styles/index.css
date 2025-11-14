@@ -23,20 +23,21 @@
   align-items: center;
 
 }
-.hero_read-right{
+.hero_read-left{
   height: 253px;
   width: 444px;
 }
-.hero_read-right p{
+.hero_read-left p{
   font-size: 20px;
 }
-.hero_read-right button{
+.hero_read-left button{
   padding: 10px 20px;
   border: 2px solid #3382D0;
   font-size: 20px;
   color: #3382D0;
   background: none;
   border-radius: 8px;
+  cursor: pointer;
 }
 .search-bar {
   display: flex;
@@ -62,8 +63,11 @@
   outline: none;
   padding: 10px 15px;
   font-size: 16px;
+  font-weight: 400;
 }
-
+input::placeholder {
+  color: #C2C1C1;
+}
 .search-box button {
   width: 98px;
   height: 68px;
@@ -107,6 +111,9 @@
   align-items: center;
   justify-content: center;
   transition: 0.2s;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
 }
 .top-menu li:hover {
   background: #7ea8ff;
@@ -122,7 +129,6 @@
 /* Phần nội dung */
 .section {
   text-align: center;
-  padding: 40px 0;
   
 }
 
@@ -161,18 +167,17 @@
   color: #000;
   transition: 0.3s ease;
 }
-
 .carousel button:hover {
   background: #88B6E5;
   transform: translateY(-50%) scale(1.1);
 }
-
 .prev { left: 20px; }
 .next { right: 20px; }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.6s ease;
+  gap: 20px;
+  transition: transform 0.8s ease;
 }
 
 .card {
@@ -181,13 +186,27 @@
   background: linear-gradient(#c8c8c8 60%, #fff 40%);
   border-radius: 16px;
   flex-shrink: 0;
+  opacity: 0.5;
+  transform: scale(0.8) rotateY(0deg);
   transition: transform 0.6s ease, opacity 0.6s ease;
-  transform: scale(0.6);
-  opacity: 0.6;
+  cursor: pointer;
 }
 
 .card.active {
-  transform: scale(1); 
+  transform: scale(1) rotateY(0deg);
   opacity: 1;
+  z-index: 3;
+}
+
+.card.left {
+  transform: scale(0.85) rotateY(15deg);
+  opacity: 0.7;
   z-index: 2;
 }
+
+.card.right {
+  transform: scale(0.85) rotateY(-15deg);
+  opacity: 0.7;
+  z-index: 2;
+}
+
