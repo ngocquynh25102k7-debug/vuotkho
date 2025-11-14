@@ -49,7 +49,18 @@
         color: #ffffff;
     }
 }
-
+.book-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.book-info-1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 669px;
+    width: 585px;
+}
 
 .book-info-1 p:nth-of-type(1) {
     padding: 4px 8px;
@@ -57,18 +68,16 @@
     background: #E9E9E9;
     width: 84px;
     border-radius: 4px;
-    margin-bottom: 20px;
+    
 }
 
 .book-info-1 p:nth-of-type(3) {
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 20px;
+    
 }
 
-.price {
-    margin-bottom: 20px;
-}
+
 
 .price .current {
     color: #e60000;
@@ -89,7 +98,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 20px;
 }
 
 .book-info-2 p:nth-of-type(1) {
@@ -111,7 +119,6 @@
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .highlight.green {
@@ -143,7 +150,6 @@
     flex-direction: column;
     gap: 4px;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .book-info-4 p:nth-of-type(1) {
