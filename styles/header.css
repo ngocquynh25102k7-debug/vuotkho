@@ -1,6 +1,8 @@
 header {
   font-family: "Inter", sans-serif;
   width: 100%;
+  position: relative; 
+  z-index: 100;
 }
 header .wrapper {
   max-width: 1440px;
@@ -170,7 +172,7 @@ header .wrapper {
   padding: 17px 23px;
   width: 251px;
   height: 135px;
-  z-index: 999;
+  z-index: 100000000;
 }
 
 /* --- PHẦN USER INFO (ảnh, tên, email) --- */

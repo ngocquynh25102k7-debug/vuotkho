@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm khách hàng</title>
+    <link rel="stylesheet" href="./styles/add.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Thêm khách hàng mới</h2>
+
+    <form id="addForm">
+        <label>Họ và tên</label>
+        <input type="text" id="name" required>
+
+        <label>Số điện thoại</label>
+        <input type="text" id="phone" required>
+
+        <label>Ngày đăng ký</label>
+        <input type="date" id="startDate" required>
+
+        <label>Ngày hết hạn</label>
+        <input type="date" id="endDate" required>
+
+        <label>Trạng thái</label>
+        <select id="status">
+            <option value="active">Đang hoạt động</option>
+            <option value="pending">Chờ duyệt</option>
+            <option value="overdue">Hết hạn</option>
+        </select>
+
+        <button type="submit">Lưu khách hàng</button>
+        <a href="manage.html" class="back">Quay lại</a>
+    </form>
+</div>
+
+<script src="./js/add.js"></script>
+
+</body>
+</html>
