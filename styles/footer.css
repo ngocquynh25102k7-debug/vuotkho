@@ -3,7 +3,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   padding: 49px 130px;
-  width: 100vw;
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   height: 298px;
@@ -14,7 +14,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    img {
+    .img {
       gap: 10px;
       width: 134px;
       height: 144px;
@@ -78,6 +78,7 @@ footer {
       align-items: flex-start;
       gap: 15px;
       li {
+        width : 278px;
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
@@ -86,6 +87,7 @@ footer {
         text-decoration: none;
         display: flex;
         align-items: center;
+        gap: 10px;
       }
       .icon {
         width: 24px;
