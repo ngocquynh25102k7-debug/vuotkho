@@ -23,18 +23,6 @@ body {
     background: #FFFFFF;
     color: #3382D0;
 }
-h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 900;
-    font-size: 56px;
-    height: 77px;
-    color: #3877CF;
-    font-family: 'Inter', sans-serif;
-    margin: 30px;
-    white-space: nowrap;
-}
 .auth-wrapper {
     display: flex;
     justify-content: space-between;
@@ -42,37 +30,61 @@ h1 {
     width: 100%;
     max-width: 1440px;
     margin: auto;
+    height: 906px;
 }
 .logo-color {
-    background: #DDEAFF;
-    width: 80%;
+    width: 615px;
+    height: 410px;
 }
 .auth-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    max-width: 1440px;
+    height: 906px;
 }
 .auth-left {
     display: flex;
     justify-content: center;
     background: #DDEAFF;
     align-items: center;
-    width: 60%;
-    height: 733px;
+    width: calc(100% - 739px);
+    height: 906px;
+}
+.auth-right {
+    width: 739px;
+    height: 906px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
 }
 .auth-box {
-    width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 form {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.login-container {
+.name-login {
+    width: 503px;
+    height: 77px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    font-weight: 900;
+    font-size: 56px;
+    color: #3877CF;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
 }
 .form-row {
     display: flex;
@@ -82,15 +94,14 @@ form {
     display: flex;
     font-weight: 500;
     font-size: 20px;
-    font-family: 'Poppins', sans-serif;
     color: #181818;
 }
 .username {
-    height: 53px;
+    height: 39px;
     align-items: center;
 }
 .password {
-    height: 53px;
+    height: 39px;
     align-items: center;
 }
 .checkbox {
@@ -99,18 +110,20 @@ form {
     align-items: center;
 }
 .input-field {
-    width: 95%;
-    padding: 9px 35px;
+    width: 498px;
+    height: 43px;
+    padding-left: 20px;
     border-radius: 8px;
     border: 1px solid #00000040;
     outline: none;
     font-size: 16px;
     background: transparent;
+    border: 1px solid hsla(0, 0%, 0%, 0.25);
 }
 
 .input-field:focus {
-    border-color: #3877CF;
-    box-shadow: 0 0 0 2px rgba(14,122,68,0.2);
+    border-color: #000000;
+    box-shadow: 0 0 0 1px #000000
 }
 .checkbox-row {
     display: flex;
@@ -133,7 +146,7 @@ form {
     text-decoration: none;
 }
 .btn-login {
-    width: 95%;
+    width: 503px;
     padding: 17px;
     background: #88B6E5;
     color: #fff;
@@ -142,14 +155,22 @@ form {
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
+}
+.btn-login:hover {
+    transform: scale(1.01);
+    box-shadow: 0 5px 10px #88B6E5;
+}
+.login {
+    text-decoration: none;
+    color: #FFFFFF;
 }
 .divider {
     display: flex;
     align-items: center;
     text-align: center;
     color: #999;
-    width: 95%;
+    width: 503px;
+    margin: 11.2px 0;
 }
 .divider::before,
 .divider::after {
@@ -168,12 +189,16 @@ form {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 95%;
+  width: 503px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
   cursor: pointer;
+}
+.btn-google:hover {
+    transform: scale(1.01);
+    box-shadow: 0 5px 10px  rgba(0,0,0,0.18);
 }
 .icon-gg {
     width: 41.999996185302734px;
@@ -188,8 +213,12 @@ form {
     color: #e14b4b;
     text-decoration: none;
     font-weight: 600;
+
+    display: inline-block;
+    transition: transform 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .register-row a:hover {
-    text-decoration: underline;
+    transform: translateY(-1px) scale(1.01);
+    text-decoration: none;
 }
