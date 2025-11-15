@@ -49,7 +49,19 @@
         color: #ffffff;
     }
 }
-
+.book-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 669px;
+    width: 585px;
+}
+.book-info-1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 585px;
+}
 
 .book-info-1 p:nth-of-type(1) {
     padding: 4px 8px;
@@ -57,18 +69,16 @@
     background: #E9E9E9;
     width: 84px;
     border-radius: 4px;
-    margin-bottom: 20px;
+    
 }
 
 .book-info-1 p:nth-of-type(3) {
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 20px;
+    
 }
 
-.price {
-    margin-bottom: 20px;
-}
+
 
 .price .current {
     color: #e60000;
@@ -89,7 +99,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 20px;
 }
 
 .book-info-2 p:nth-of-type(1) {
@@ -111,7 +120,6 @@
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .highlight.green {
@@ -143,7 +151,6 @@
     flex-direction: column;
     gap: 4px;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .book-info-4 p:nth-of-type(1) {
@@ -199,12 +206,16 @@
 }
 
 .hero-list {
-    height: 1458px;
+    height: 1418px;
     width: 1258px;
-    padding: 20px 40px;
+    padding: 40px 40px;
     background-color: #E9F0FF;
     border-radius: 16px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    
 }
 
 .item {
@@ -323,6 +334,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                cursor: pointer;
             }
 
             a:hover {
@@ -339,6 +351,10 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 
 }
+.hero-title{
+    height: 58px;
+    width: 454px;
+}
 
 .hero-title p {
     font-size: 48px;
@@ -346,14 +362,14 @@
 }
 
 .hero-card-track {
-    height: 1314px;
+    height: 1154px;
     display: flex;
     gap: 65.5px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     column-gap: 65.5px;
-    row-gap: 100px;
+    row-gap: 40px;
 }
 .btn {
   display: inline-flex; 
