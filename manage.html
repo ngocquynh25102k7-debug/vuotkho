@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý khách hàng</title>
+
+    <link rel="stylesheet" href="./styles/manage.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+</head>
+
+<body>
+    <header></header>
+    <script src="./js/header.js"></script>
+
+    <main>
+        <div class="wrapper">
+
+            <!-- USER INFO -->
+            <div class="user--information">
+                <div class="avatar">
+                    <img src="./assets/icons/avatar_admin.png" alt="">
+                </div>
+                <div class="user--account">
+                    <h1 class="user--admin">Quản lý khách hàng</h1>
+                    <p class="text">Quản lý thông tin và trang thái khách hàng</p>
+                </div>
+            </div>
+
+            <!-- STATISTICS BOX -->
+            <div class="box--container">
+                <div class="box--item border--total">
+                    <p>Tổng bài đăng</p>
+                    <p class="count total">250</p>
+                </div>
+                <div class="box--item border--active">
+                    <p>Đã duyệt</p>
+                    <p class="count active">180</p>
+                </div>
+                <div class="box--item border--pending">
+                    <p>Chờ duyệt</p>
+                    <p class="count pending">30</p>
+                </div>
+                <div class="box--item border--overdue">
+                    <p>Hết hạn</p>
+                    <p class="count overdue">40</p>
+                </div>
+            </div>
+            <div class="table">
+                <!-- ACTION BAR -->
+                <div class="action--bar">
+                    <div class="search_status">
+                        <div class="search">
+                            <img src="./assets/icons/kinhlup.png" alt=""> <input id="searchInput" type="text"
+                                placeholder="Tìm kiếm tên hoặc số điện thoại">
+                        </div>
+
+                        <div class="status--filter">
+                            <select name="status" id="statusFilter">
+                                <option value="all">Tất cả trạng thái</option>
+                                <option value="active">Đang hoạt động</option>
+                                <option value="pending">Chờ duyệt</option>
+                                <option value="overdue">Hết hạn</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="add--button">
+                        <button id="addBtn"><img src="./assets/icons/avatar-plus.png" alt="">
+                            Thêm khách hàng</button>
+                    </div>
+                </div>
+
+                <!-- TABLE -->
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Hành động</th>
+                                <th>Tên khách hàng</th>
+                                <th>Điện thoại</th>
+                                <th>Ngày đăng ký</th>
+                                <th>Ngày hết hạn</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="customerTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="./js/manage.js"></script>
+
+
+</body>
+
+</html>
