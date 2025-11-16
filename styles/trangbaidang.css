@@ -106,24 +106,25 @@
                     .more--img {
                         width: 1160px;
                         height: 248px;
-                        border-radius: 10px;
-                        
+
                         a {
                             width: 100%;
                             height: 100%;
-                            
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
                         }
                     }
+
                     p {
                         color: #c80000;
                         font-size: 14px;
                         font-weight: 300;
                     }
                 }
-
-
             }
-
         }
 
         .content--2 {
@@ -189,8 +190,8 @@
                             font-weight: 300;
                             border-radius: 6px;
                             border: 1px solid #bebebe;
+                            padding-right: 20px;
                         }
-
                     }
 
                     .item--2 {
@@ -225,6 +226,7 @@
                                 padding-left: 20px;
                                 font-size: 20px;
                                 font-weight: 300;
+                                padding-right: 20px;
                             }
 
                             input[type=number]::-webkit-outer-spin-button,
@@ -236,7 +238,6 @@
                             input[type=number] {
                                 -moz-appearance: textfield;
                             }
-
                         }
                     }
 
@@ -270,7 +271,6 @@
                             padding-bottom: 20px;
                             resize: none;
 
-
                         }
 
                         textarea:focus::placeholder {
@@ -303,9 +303,7 @@
                         }
                     }
                 }
-
             }
-
         }
 
         .content--3 {
@@ -333,9 +331,9 @@
             }
 
             a:hover:nth-child(1) {
-                background-color: #3382d0;
-                border: none;
-                color: #ffffff;
+                background-color: #f1f1f178;
+                color: #3382d0;
+                border: 1px solid #3382d0;
 
             }
 
@@ -346,11 +344,9 @@
             }
 
             a:hover:nth-child(2) {
-                border: 1px solid #3382d0;
-                color: #3382d0;
-                background-color: #ffffff;
 
-
+                color: #ffffff;
+                background-color: #257ace;
             }
         }
     }
