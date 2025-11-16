@@ -86,7 +86,6 @@ footer {
         color: rgba(255, 255, 255, 0.7);
         text-decoration: none;
         display: flex;
-        align-items: center;
         gap: 10px;
       }
       .icon {

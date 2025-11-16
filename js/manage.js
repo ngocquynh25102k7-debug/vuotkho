@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function translateStatus(status) {
     switch (status) {
       case 'active':
-        return 'còn hạn';
+        return 'Còn hạn';
       case 'pending':
         return 'Chờ duyệt';
       case 'overdue':
@@ -70,9 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </button>
 
             <button class="action-btn" onclick="deleteCustomer(${index})">
-                <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 6.11111H20M7.78571 9.94444V20.1667M13.2143 9.94444V20.1667M7.78571 1H13.2143C13.5742 1 13.9194 1.13462 14.1739 1.37425C14.4284 1.61388 14.5714 1.93889 14.5714 2.27778V6.11111H6.42857V2.27778C6.42857 1.93889 6.57156 1.61388 6.82607 1.37425C7.08058 1.13462 7.42578 1 7.78571 1ZM2.35714 6.11111H18.6429V22.7222C18.6429 23.0611 18.4999 23.3861 18.2454 23.6257C17.9908 23.8654 17.6457 24 17.2857 24H3.71429C3.35435 24 3.00915 23.8654 275464 23.6257C2.50013 23.3861 2.35714 23.0611 2.35714 22.7222V6.11111Z" stroke="#FA3636" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <img src="./assets/icons/trash.png" alt="Delete"> 
             </button>
         </td>
         
