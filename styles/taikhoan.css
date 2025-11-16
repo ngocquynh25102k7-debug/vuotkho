@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.hero_left {
+    height: 773px;
+    width: 466px;
+    background-color: #DDEAFF;
+    padding: 63px 42px 402px 42px;
+}
+
+.hero_left-list {
+    height: 308px;
+    width: 382px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero_left-list h2 {
+    font-size: 36px;
+    font-weight: 600;
+    padding-left: 8px;
+}
+
+.hero_left-list p {
+    font-size: 20px;
+    font-weight: 300;
+    padding-left: 27px;
+}
+
+.hero_left-list a {
+    width: 382px;
+    height: 64px;
+    background-color: #FFFFFF7A;
+    border-radius: 8px;
+    border: 1px solid #ABABAB;
+    display: flex;
+    gap: 13px;
+    padding: 11px 11px;
+    text-decoration: none;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
+
+.hero_left-list img {
+    height: 26.5px;
+    width: 26px;
+}
+
+.hero_left-list a:hover {
+    background: rgba(136, 182, 229, 0.5);
+}
+
+.hero_right {
+    height: 773px;
+    width: 974px;
+    padding-top: 34px;
+}
+
+.hero_right-info {
+    height: 739px;
+    width: 974px;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+}
+
+.hero_right-info-1 {
+    padding: 0px 4px;
+    height: 163px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero_right-info-1 h2 {
+    height: 62px;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 12px 38px 12px 47px;
+}
+
+.hero_right-info-1 p {
+    padding: 0px 4px;
+    font-size: 26px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding-left: 107px;
+}
+
+
+.hero_right-info-2 {
+    height: 284px;
+    width: 974px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 cột */
+    gap: 0px 41px;
+    /* hàng / cột */
+    padding: 0px 108.5px;
+}
+
+.form-item {
+    height: 114px;
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+input {
+    width: 358px;
+    height: 49px;
+    padding: 11px 20px;
+    font-size: 20px;
+    font-weight: 300;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.form-item p{
+    font-size: 26px;
+    font-weight: 500;
+    padding-left: 12px;
+}
