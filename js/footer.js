@@ -1,6 +1,6 @@
 
 let footerInnerHTML = ` <div class="logo">
-            <img src="./assets/images/pages/trangchu/logo_footer.png" alt="logo" class="img">
+            <img src="./assets/images/pages/trangchu/logo_footer.png" alt="logo">
             <div class="text">VƯỢT KHÓ</div>
         </div>
         <div class="infor">
@@ -26,7 +26,7 @@ let footerInnerHTML = ` <div class="logo">
                 </li>
                 <li class="text">
                     <div class="icon"><img src="./assets/icons/location_on.png" alt=""></div>
-                    Nguyễn Văn Bảo, P1, Gò<br> Vấp, Tp HCM.
+                    Nguyễn Văn Bảo, Phường Hạnh Thông, Tp HCM.
                 </li>
             </ul>
         </div>
