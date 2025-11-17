@@ -51,8 +51,11 @@ main .wrapper .user--information .user--account .user--email {
   background: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 12px;
+  transition: box-shadow 0.2s ease;
 }
-
+.box--item:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
 .border--total {
   border-color: #a3caf2;
 }
@@ -174,7 +177,7 @@ main .wrapper .user--information .user--account .user--email {
   top: 100% !important ;
   margin-top: 3px !important ;
   border-radius: 10px !important ;
-  word-break:normal !important ;
+  word-break: normal !important ;
 }
 
 .choices__list--dropdown .choices__item--dropdown.is-highlighted {
@@ -230,6 +233,10 @@ main .wrapper .user--information .user--account .user--email {
   line-height: 15px;
   text-align: center;
   color: #ffffff;
+  cursor: pointer;
+}
+#addBtn:hover {
+  transform: translateY(-3px);
 }
 
 .table {
