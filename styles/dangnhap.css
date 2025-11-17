@@ -15,7 +15,9 @@ body {
     white-space: nowrap;
 }
 .btn-register:hover {
-    background: #FFFFFF;
+    background-color: #6ea6df;
+    box-shadow: 0 0 5px #6ea6df;
+    transform: scale(1.01);
     color: #3382D0;
 }
 .auth-wrapper {
@@ -152,8 +154,10 @@ h1 {
     cursor: pointer;
 }
 .btn-login:hover {
+    background-color: #6ea6df;
+    box-shadow: 0 0 5px #6ea6df;
     transform: scale(1.01);
-    box-shadow: 0 5px 10px #88B6E5;
+    color: #3382D0;
 }
 .login {
     text-decoration: none;
@@ -193,11 +197,11 @@ h1 {
 }
 .btn-google:hover {
     transform: scale(1.01);
-    box-shadow: 0 5px 10px  rgba(0,0,0,0.18);
+    box-shadow: 0 0 5px  #d7d7d7;
 }
 .icon-gg {
-    width: 41.999996185302734px;
-    height: 42.70000076293945px;
+    width: 42px;
+    height: 42.7px;
 }
 .register-row {
     text-align: center;
@@ -214,6 +218,6 @@ h1 {
 }
 
 .register-row a:hover {
-    transform: translateY(-1px) scale(1.01);
+    transform: scale(1.01);
     text-decoration: none;
 }
