@@ -109,7 +109,7 @@ h1 {
 .input-field {
     width: 498px;
     height: 43px;
-    padding-left: 20px;
+    padding-inline: 45px 44px;
     border-radius: 8px;
     border: 1px solid #00000040;
     outline: none;
