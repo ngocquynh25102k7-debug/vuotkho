@@ -124,6 +124,13 @@
                             height: 100%;
                             left: 0;
                         }
+                        input:hover{
+                            cursor: pointer;
+                        }
+                    }
+                    .more--img:hover{
+                        background: rgba(221, 234, 255, 0.45);
+                        border-radius: 10px;
                     }
 
                     p {
