@@ -159,3 +159,5 @@ if (manageBtn) {
     window.location.href = "./profile.html";
   });
 }
+
+let chieuDaiWeb = document.getElementById("b")

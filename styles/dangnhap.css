@@ -122,12 +122,27 @@ h1 {
     border-color: #000000;
     box-shadow: 0 0 0 1px #000000
 }
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
 .checkbox-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
 }
+
+.checkbox-row:nth-of-type(5) {
+    gap: 10px;
+    justify-content: flex-start;
+     
+    label {
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
 .forgot-password {
     display: flex;
     justify-content: flex-end;

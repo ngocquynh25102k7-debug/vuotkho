@@ -1,4 +1,3 @@
-
 .section {
     width: 100%;
 
@@ -99,8 +98,6 @@
                 .tit {
                     width: 503px;
                     height: 25px;
-                    color: #ababab;
-                    font-size: 16px;
                     display: flex;
                     align-items: center;
                     gap: 7px;
@@ -108,6 +105,13 @@
                     input {
                         width: 18px;
                         height: 18px;
+                        cursor: pointer;
+                    }
+
+                    label {
+                        cursor: pointer;
+                        font-size: 14px;
+                        font-weight: 500px;
                     }
                 }
 
