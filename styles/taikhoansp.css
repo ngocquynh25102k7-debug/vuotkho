@@ -259,9 +259,9 @@
 .hero-card-track-wrapper {
     height: 726px;      /* chỉnh tùy bố cục bạn muốn */
     overflow-y: auto;
-    padding-right: 12px;
+
     &::-webkit-scrollbar {
-        width: 6px;
+        width: 10px;
     }
     &::-webkit-scrollbar-thumb {
         background: #d0d0d0;
