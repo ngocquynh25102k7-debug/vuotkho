@@ -31,12 +31,15 @@
     font-size: 36px;
     font-weight: 600;
     padding-left: 8px;
+    height: 44px;
 }
 
 .hero_left-list p {
     font-size: 20px;
     font-weight: 300;
-    padding-left: 27px;
+    padding:4px 22px;
+    height: 33px;
+
 }
 
 .hero_left-list a {
