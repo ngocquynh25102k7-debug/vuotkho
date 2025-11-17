@@ -1,6 +1,5 @@
 // Chờ cho toàn bộ nội dung trang (HTML, CSS) được tải xong
 document.addEventListener("DOMContentLoaded", function () {
-  
   // --- 1. HÀM QUẢN LÝ DỮ LIỆU ---
 
   // Tải khách hàng từ LocalStorage
@@ -16,12 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // HÀM Dịch trạng thái sang tiếng Việt
   function translateStatus(status) {
     switch (status) {
-      case 'active':
-        return 'Còn hạn';
-      case 'pending':
-        return 'Chờ duyệt';
-      case 'overdue':
-        return 'Hết hạn';
+      case "active":
+        return "Còn hạn";
+      case "pending":
+        return "Chờ duyệt";
+      case "overdue":
+        return "Hết hạn";
       default:
         return status; // Trả về y cũ nếu không khớp
     }
@@ -35,18 +34,78 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Tách chuỗi "YYYY-MM-DD" thành mảng [YYYY, MM, DD]
-    const parts = dateString.split('-');
-    
+    const parts = dateString.split("-");
+
     // Kiểm tra xem có đúng 3 phần không
     if (parts.length !== 3) {
       return dateString; // Trả về y cũ nếu định dạng sai
     }
-    
+
     // Gán lại biến cho dễ đọc
     const [year, month, day] = parts;
-    
+
     // Trả về chuỗi mới theo định dạng "DD/MM/YYYY"
     return `${day}/${month}/${year}`;
+  }
+
+  // --- HÀM MỚI: CẬP NHẬT THỐNG KÊ Ở CÁC BOX ---
+  function updateStats(list) {
+    const totalEl = document.querySelector(".count.total");
+    const activeEl = document.querySelector(".count.active");
+    const pendingEl = document.querySelector(".count.pending");
+    const overdueEl = document.querySelector(".count.overdue");
+
+    const total = list.length;
+    const active = list.filter((c) => c.status === "active").length;
+    const pending = list.filter((c) => c.status === "pending").length;
+    const overdue = list.filter((c) => c.status === "overdue").length;
+
+    if (totalEl) totalEl.textContent = total;
+    if (activeEl) activeEl.textContent = active;
+    if (pendingEl) pendingEl.textContent = pending;
+    if (overdueEl) overdueEl.textContent = overdue;
+  }
+
+  // --- HÀM MỚI: GẮN SỰ KIỆN CHO CÁC BOX ĐỂ LỌC BẢNG KHI CLICK ---
+  function bindBoxClicks() {
+    const boxAll = document.querySelector(".border--total");
+    const boxActive = document.querySelector(".border--active");
+    const boxPending = document.querySelector(".border--pending");
+    const boxOverdue = document.querySelector(".border--overdue");
+
+    function clearSelected() {
+      [boxAll, boxActive, boxPending, boxOverdue].forEach((b) => {
+        if (b) b.classList.remove("box-selected");
+      });
+    }
+
+    if (boxAll)
+      boxAll.addEventListener("click", () => {
+        clearSelected();
+        boxAll.classList.add("box-selected");
+        renderTable(loadCustomers());
+      });
+
+    if (boxActive)
+      boxActive.addEventListener("click", () => {
+        clearSelected();
+        boxActive.classList.add("box-selected");
+        renderTable(loadCustomers().filter((c) => c.status === "active"));
+      });
+
+    if (boxPending)
+      boxPending.addEventListener("click", () => {
+        clearSelected();
+        boxPending.classList.add("box-selected");
+        renderTable(loadCustomers().filter((c) => c.status === "pending"));
+      });
+
+    if (boxOverdue)
+      boxOverdue.addEventListener("click", () => {
+        clearSelected();
+        boxOverdue.classList.add("box-selected");
+        renderTable(loadCustomers().filter((c) => c.status === "overdue"));
+      });
   }
 
   // --- 2. HÀM HIỂN THỊ BẢNG ---
@@ -58,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     list.forEach((item, index) => {
       const tr = document.createElement("tr");
-      
+
       // *** ĐÃ SỬA LẠI CÁC DÒNG NGÀY THÁNG ***
       tr.innerHTML = `
         <td class ="button">
@@ -92,9 +151,22 @@ document.addEventListener("DOMContentLoaded", function () {
     let list = loadCustomers();
     // (Tùy chọn: Thêm confirm box cho an toàn)
     if (confirm("Bạn có chắc chắn muốn xóa khách hàng này?")) {
-        list.splice(index, 1);
-        saveCustomers(list);
-        renderTable(list); // Vẽ lại bảng
+      // get item so we can delete remote if possible
+      const removed = list.splice(index, 1)[0];
+
+      // If remote delete function exists and removed has id, try remote delete
+      if (window.deleteCustomerRemote && removed && removed.id) {
+        window.deleteCustomerRemote(removed.id).catch((err) => {
+          console.warn(
+            "Remote delete failed, will still update localStorage",
+            err
+          );
+        });
+      }
+
+      saveCustomers(list);
+      renderTable(list); // Vẽ lại bảng
+      updateStats(list);
     }
   };
 
@@ -105,7 +177,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Chuyển hướng sang trang chỉnh sửa
     window.location.href = "./edit.html";
   };
-
 
   // --- 4. GẮN CÁC SỰ KIỆN (TÌM KIẾM, LỌC, THÊM) ---
 
@@ -145,10 +216,31 @@ document.addEventListener("DOMContentLoaded", function () {
     renderTable(list);
   });
 
-
   // --- 5. CHẠY LẦN ĐẦU KHI TẢI TRANG ---
 
   // Hiển thị bảng ngay khi trang được tải
-  renderTable(loadCustomers());
+  // Render table và cập nhật thống kê
+  const allCustomers = loadCustomers();
+  renderTable(allCustomers);
+  updateStats(allCustomers);
+  bindBoxClicks();
 
+  // Nếu remote loader có sẵn (Firestore), tải dữ liệu remote để hiển thị chung cho tất cả máy
+  if (window.loadCustomersRemote) {
+    window
+      .loadCustomersRemote()
+      .then((remoteList) => {
+        // In case remoteList is not array
+        if (Array.isArray(remoteList)) {
+          renderTable(remoteList);
+          updateStats(remoteList);
+        }
+      })
+      .catch((err) => {
+        console.warn(
+          "Failed to load remote customers, using localStorage",
+          err
+        );
+      });
+  }
 });

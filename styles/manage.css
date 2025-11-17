@@ -236,7 +236,7 @@ main .wrapper .user--information .user--account .user--email {
   align-items: center;
 }
 .table-wrapper {
-  margin: 0 44px;
+  width: 1351px;
   background: #fbfcff;
   border: 2px solid #e3edf8;
   border-top: none;
@@ -248,16 +248,16 @@ main .wrapper .user--information .user--account .user--email {
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
-  
+
   /* QUAN TRỌNG: Bắt các cột tuân theo width */
-  table-layout: fixed; 
+  table-layout: fixed;
 }
 
 .table-wrapper thead tr {
   width: 100%;
-  background-color: #FBFCFF !important;
-  border-bottom: 2px solid #EAEAEA;
-  
+  background-color: #fbfcff !important;
+  border-bottom: 2px solid #eaeaea;
+
   /* XÓA: display: inline-flex */
   /* XÓA: justify-content */
   /* XÓA: padding: 0 29px */
@@ -267,16 +267,14 @@ main .wrapper .user--information .user--account .user--email {
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #eaeaea;
-
-  /* XÓA: display: inline-flex */
-  /* XÓA: justify-content */
-  /* XÓA: padding: 0 29px */
 }
-
+.table-wrapper #customerTable tr:hover {
+  background-color: #fbfcff;
+}
 /* GIỮ NGUYÊN STYLE HEADER CỦA BẠN */
 .table-wrapper th {
   text-align: left;
-  font-weight: 600; 
+  font-weight: 600;
   font-size: 24px;
   color: #000000;
   padding: 28px 20px; /* Sửa lại padding cho chuẩn */
@@ -287,10 +285,10 @@ main .wrapper .user--information .user--account .user--email {
 .table-wrapper td {
   text-align: left;
   font-weight: 400;
-  font-size: 14px;
-  color: #333;
+  font-size: 16px;
+  color: #000000;
   padding: 16px 28px;
-  vertical-align: middle; 
+  vertical-align: middle;
   word-break: break-word; /* Nếu chữ quá dài, tự xuống hàng */
 
   /* XÓA: display: flex (Lỗi chính) */
@@ -311,35 +309,36 @@ main .wrapper .user--information .user--account .user--email {
 
 /* THÊM: GÁN WIDTH CỐ ĐỊNH CHO TỪNG CỘT (QUAN TRỌNG NHẤT) */
 
-/* Cột 1: Hành động */
+/* Gán width: mặc định 16% cho mỗi cột, ngoại trừ cột có 3 chữ (cột 2) được nhận thêm 4% */
 .table-wrapper th:nth-child(1),
 .table-wrapper td:nth-child(1) {
   width: 16%;
 }
-/* Cột 2: Tên khách hàng */
 .table-wrapper th:nth-child(2),
 .table-wrapper td:nth-child(2) {
-  width: 16%;
+  width: 20%;
 }
-/* Cột 3: Điện thoại */
 .table-wrapper th:nth-child(3),
 .table-wrapper td:nth-child(3) {
   width: 16%;
 }
-/* Cột 4: Ngày đăng ký */
 .table-wrapper th:nth-child(4),
 .table-wrapper td:nth-child(4) {
   width: 16%;
 }
-/* Cột 5: Ngày hết hạn */
 .table-wrapper th:nth-child(5),
 .table-wrapper td:nth-child(5) {
   width: 16%;
 }
-/* Cột 6: Trạng thái */
 .table-wrapper th:nth-child(6),
 .table-wrapper td:nth-child(6) {
   width: 16%;
+}
+
+/* Đảm bảo header cột 'Tên khách hàng' không xuống dòng */
+.table-wrapper th:nth-child(2) {
+  white-space: nowrap;
+  overflow: visible;
 }
 
 /* Style cho các nút Sửa/Xóa */
@@ -355,7 +354,7 @@ main .wrapper .user--information .user--account .user--email {
 
 /* Style cho cột "Trạng thái" (Dùng class từ JS) */
 .table-wrapper .status-active {
-  color: #007bff; /* Xanh dương (còn hạn) */
+  color: #3382d0;
   font-weight: 500;
 }
 .table-wrapper .status-pending {
@@ -363,6 +362,6 @@ main .wrapper .user--information .user--account .user--email {
   font-weight: 500;
 }
 .table-wrapper .status-overdue {
-  color: #FA3636; /* Đỏ */
+  color: #fa3636; /* Đỏ */
   font-weight: 500;
 }
