@@ -249,11 +249,22 @@
 }
 
 .hero-card-track {
-    height: 726px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     column-gap: 44px;
     row-gap: 26px;
+}
+.hero-card-track-wrapper {
+    height: 726px;      /* chỉnh tùy bố cục bạn muốn */
+    overflow-y: auto;
+    padding-right: 12px;
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #d0d0d0;
+        border-radius: 5px;
+    }
 }
