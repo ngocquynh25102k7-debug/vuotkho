@@ -1,43 +1,86 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thêm khách hàng</title>
     <link rel="stylesheet" href="./styles/add.css">
-</head>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
+    <header></header>
+    <script src="./js/header.js"></script>
 
-<div class="container">
-    <h2>Thêm khách hàng mới</h2>
+    <main class="page-add">
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <h1>Thêm khách hàng mới</h1>
+            <a href="manage.html" class="btn btn-ghost">Quay lại</a>
+          </div>
 
-    <form id="addForm">
-        <label>Họ và tên</label>
-        <input type="text" id="name" required>
+          <form id="addForm" class="add-form">
+            <div class="row">
+              <label for="name">Họ và tên</label>
+              <input
+                type="text"
+                id="name"
+                required
+                placeholder="Nguyễn Văn A"
+              />
+            </div>
 
-        <label>Số điện thoại</label>
-        <input type="text" id="phone" required>
+            <div class="two-col">
+              <div class="col">
+                <label for="phone">Số điện thoại</label>
+                <input
+                  type="text"
+                  id="phone"
+                  required
+                  placeholder="0987654321"
+                />
+              </div>
+              <div class="col">
+                <label for="status">Trạng thái</label>
+                <select id="status">
+                  <option value="active">Đang hoạt động</option>
+                  <option value="pending">Chờ duyệt</option>
+                  <option value="overdue">Hết hạn</option>
+                </select>
+              </div>
+            </div>
 
-        <label>Ngày đăng ký</label>
-        <input type="date" id="startDate" required>
+            <div class="two-col">
+              <div class="col">
+                <label for="startDate">Ngày đăng ký</label>
+                <input type="date" id="startDate" required />
+              </div>
+              <div class="col">
+                <label for="endDate">Ngày hết hạn</label>
+                <input type="date" id="endDate" required />
+              </div>
+            </div>
 
-        <label>Ngày hết hạn</label>
-        <input type="date" id="endDate" required>
+            <div class="actions">
+              <button type="submit" class="btn btn-primary">
+                Lưu khách hàng
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
 
-        <label>Trạng thái</label>
-        <select id="status">
-            <option value="active">Đang hoạt động</option>
-            <option value="pending">Chờ duyệt</option>
-            <option value="overdue">Hết hạn</option>
-        </select>
-
-        <button type="submit">Lưu khách hàng</button>
-        <a href="manage.html" class="back">Quay lại</a>
-    </form>
-</div>
-
-<script src="./js/add.js"></script>
-
-</body>
+    <!-- Firebase SDK (needed if you want remote/shared storage) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <script src="./js/firebase.js"></script>
+    <script src="./js/firebase-config.js"></script>
+    <script src="./js/add.js"></script>
+  </body>
 </html>
