@@ -248,7 +248,7 @@ header .wrapper {
   border: none;
   text-align: left;
   border-radius: 6px;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, color 0.18s ease;
   display: flex;
   gap: 5px;
 }

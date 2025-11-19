@@ -3,6 +3,36 @@ const currentPage = window.location.pathname.split("/").pop() || "index.html";
 // Read session (if any) from localStorage
 const session = JSON.parse(localStorage.getItem("vk_session") || "null");
 
+// If session exists but email/phone is missing, try to backfill from stored accounts so header doesn't show 'undefined'
+if (session && (!session.email || !session.phone)) {
+  try {
+    const accounts = JSON.parse(localStorage.getItem("vk_accounts") || "[]");
+    const acc = accounts.find(
+      (a) => a.id == session.accountId || a.accountName === session.accountName
+    );
+    if (acc) {
+      session.email = session.email || acc.email || "";
+      session.phone = session.phone || acc.phone || "";
+      session.fullName = session.fullName || acc.fullName || "";
+      // persist updated session so subsequent loads have email/phone
+      localStorage.setItem("vk_session", JSON.stringify(session));
+    }
+  } catch (e) {
+    // ignore parse errors
+  }
+}
+
+// Configurable logout icon: put your file at this path (e.g. assets/icons/logOut.png)
+const LOGOUT_ICON = (() => {
+  // prefer the 'logOut.png' asset if present, otherwise fallback to existing out.png
+  const preferred = "./assets/icons/logOut.png";
+  try {
+    return preferred;
+  } catch (e) {
+    return "./assets/icons/out.png";
+  }
+})();
+
 // button text/link for unauthenticated users
 const unauthButtonText =
   currentPage === "index.html" || currentPage === "dangky.html"
@@ -76,11 +106,11 @@ let headerInnerHTML = `
                     <li class="nav_bar"><a href="index.html" class="${isActivePage(
                       "index.html"
                     )}">Trang chủ</a></li>
-                    <li class="nav_bar"><a href="post.html" class="${isActivePage(
-                      "post.html"
+                    <li class="nav_bar"><a href="trangbaidang.html" class="${isActivePage(
+                      "trangbaidang.html"
                     )}">Bài đăng</a></li>
-                    <li class="nav_bar"><a href="#" class="${isActivePage(
-                      "transactions.html"
+                    <li class="nav_bar"><a href="timkiem.html" class="${isActivePage(
+                      "timkiem.html"
                     )}">Giao dịch</a></li>
                 </ul>
             </nav>
@@ -99,6 +129,67 @@ const userBtn = document.getElementById("user-btn");
 const userMenu = document.getElementById("user-menu");
 const logoutBtn = document.getElementById("btn-logout");
 const manageBtn = document.getElementById("manage-account");
+
+// --- Logout confirmation modal helpers ---
+function ensureLogoutModalExists() {
+  if (document.getElementById("logout-modal")) return;
+  const html = `
+  <div id="logout-modal" class="vk-modal-overlay" style="display:none">
+    <div class="vk-modal" role="dialog" aria-modal="true" aria-labelledby="logout-title">
+  <div class="vk-modal-icon"><img src="${LOGOUT_ICON}" alt="logout icon" onerror="this.onerror=null;this.src='./assets/icons/out.png'"/></div>
+      <h2 id="logout-title">Xác nhận đăng xuất</h2>
+      <p class="vk-modal-sub">Tài khoản: <strong id="logout-username">User</strong></p>
+      <p class="vk-modal-note">Bạn có chắc chắn muốn đăng xuất khỏi hệ thống? Bạn sẽ cần đăng nhập lại để tiếp tục.</p>
+
+      <div class="vk-modal-warning">
+        <div class="vk-modal-warning-icon"><img src="./assets/icons/warningIcon.png" alt="warning" onerror="this.onerror=null;this.src='./assets/icons/warningIcon.png'"/></div>
+        <div class="vk-modal-warning-text">Hãy đảm bảo bạn đã lưu toàn bộ công việc</div>
+      </div>
+
+      <div class="vk-modal-actions">
+        <button id="logout-cancel" class="vk-btn vk-btn-outline">Hủy bỏ</button>
+        <button id="logout-confirm" class="vk-btn vk-btn-danger">Đăng xuất</button>
+      </div>
+    </div>
+  </div>`;
+  document.body.insertAdjacentHTML("beforeend", html);
+
+  // wire buttons
+  const modal = document.getElementById("logout-modal");
+  modal.addEventListener("click", (ev) => {
+    if (ev.target === modal) hideLogoutModal();
+  });
+  document.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape") hideLogoutModal();
+  });
+  document
+    .getElementById("logout-cancel")
+    .addEventListener("click", hideLogoutModal);
+  document.getElementById("logout-confirm").addEventListener("click", () => {
+    // perform logout
+    localStorage.removeItem("vk_session");
+    hideLogoutModal();
+    window.location.href = "index.html";
+  });
+}
+
+function showLogoutModal() {
+  ensureLogoutModalExists();
+  const modal = document.getElementById("logout-modal");
+  const nameEl = document.getElementById("logout-username");
+  try {
+    const s = JSON.parse(localStorage.getItem("vk_session") || "null");
+    nameEl.textContent = s && s.fullName ? s.fullName : "Admin User";
+  } catch (e) {
+    nameEl.textContent = "Admin User";
+  }
+  modal.style.display = "flex";
+}
+
+function hideLogoutModal() {
+  const modal = document.getElementById("logout-modal");
+  if (modal) modal.style.display = "none";
+}
 
 if (userBtn && userMenu) {
   // toggle menu when clicking user button
@@ -146,9 +237,8 @@ document.addEventListener("keydown", (e) => {
 if (logoutBtn) {
   logoutBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    localStorage.removeItem("vk_session");
-    // reload so header re-renders as unauthenticated
-    window.location.reload();
+    // show confirmation modal instead of immediate logout
+    showLogoutModal();
   });
 }
 
@@ -156,7 +246,7 @@ if (logoutBtn) {
 if (manageBtn) {
   manageBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    window.location.href = "./profile.html";
+    window.location.href = "./taikhoan.html";
   });
 }
 
