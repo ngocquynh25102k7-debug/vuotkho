@@ -134,6 +134,19 @@
                             }
                         }
                     }
+                    .wrapper--item:nth-of-type(1){
+                        background-color: #5da2e7;
+                        .item--letter{
+                            .item--letter--1{
+                                p{
+                                    color: #ffffff;
+                                }
+                            }
+                            p{
+                                color: #ffffff;
+                            }
+                        }
+                    }
                 }
 
                 .wrapper--item:hover {
