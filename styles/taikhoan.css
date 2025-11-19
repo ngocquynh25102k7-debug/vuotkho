@@ -73,36 +73,41 @@
 }
 
 .hero_right-info {
-  height: 739px;
-  width: 974px;
-  display: flex;
-  flex-direction: column;
-  gap: 43px;
+    height: 739px;
+    width: 974px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .hero_right-info-1 {
-  padding: 0px 4px;
-  height: 163px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    padding: 0px 4px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .hero_right-info-1 h2 {
-  height: 62px;
-  font-size: 40px;
-  font-weight: 700;
-  padding: 12px 38px 12px 47px;
+    height: 44px;
+    font-size: 36px;
+    font-weight: 700;
+    padding:0px 38px 0px 55px;
 }
 
 .hero_right-info-1 p {
-  padding: 0px 4px;
-  font-size: 26px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  padding-left: 107px;
+    padding: 0px 4px;
+    font-size: 26px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding-left: 107px;
+    height: 64px;
+}
+.hero_right-info-1 img{
+    height: 60px;
+    width: 60px;
 }
 
 .hero_right-info-2 {
@@ -117,11 +122,11 @@
 }
 
 .form-item {
-  height: 114px;
-  width: 358px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    height: 84px;
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 label {
@@ -130,57 +135,18 @@ label {
 }
 
 input {
-  width: 358px;
-  height: 49px;
-  padding: 11px 20px;
-  font-size: 20px;
-  font-weight: 300;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  outline: none;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    width: 358px;
+    height: 49px;
+    padding: 11px 20px;
+    font-size: 20px;
+    font-weight: 300;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.form-item p {
-  font-size: 26px;
-  font-weight: 500;
-  padding-left: 12px;
-}
-
-/* Styled save button for account page */
-#saveProfileBtn {
-  display: inline-block;
-  padding: 12px 22px;
-  background: linear-gradient(90deg, #3078d6 0%, #1f7ed0 50%, #1063b8 100%);
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(31, 126, 208, 0.18);
-  transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
-  outline: none;
-}
-
-#saveProfileBtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(31, 126, 208, 0.22);
-}
-
-#saveProfileBtn:active {
-  transform: translateY(0);
-  box-shadow: 0 6px 14px rgba(31, 126, 208, 0.16);
-}
-
-#saveProfileBtn:focus {
-  box-shadow: 0 0 0 4px rgba(31, 126, 208, 0.12),
-    0 8px 20px rgba(31, 126, 208, 0.18);
-}
-
-/* Make button full-width inside the form-item on small screens */
-@media (max-width: 720px) {
-  #saveProfileBtn {
-    width: 100%;
-    padding: 14px 18px;
-  }
+.form-item p{
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 12px;
 }

@@ -4,6 +4,7 @@ header {
   position: relative;
   z-index: 100;
 }
+
 header .wrapper {
   max-width: 1440px;
   margin: auto;
@@ -17,6 +18,7 @@ header .wrapper {
 }
 
 .logo {
+  gap: 24px;
   display: flex;
   align-items: center;
 }
@@ -28,7 +30,6 @@ header .wrapper {
 }
 
 .logo .text {
-  width: 191px;
   height: 42px;
   font-style: normal;
   font-weight: 600;
@@ -77,6 +78,7 @@ header .wrapper {
   color: #ffffff;
   background: rgba(255, 255, 255, 0.2);
 }
+
 .nav_button ul li a.active:hover {
   background: rgba(255, 255, 255, 0.2);
   color: #1f2256;
@@ -84,7 +86,9 @@ header .wrapper {
 
 /* Button styles */
 .nav_button button {
-  padding: 10px 20px;
+  padding: 10px 0;
+  width: 145px;
+  justify-content: center;
   border: 2px solid #ffffff;
   border-radius: 8px;
   background: transparent;
@@ -122,6 +126,7 @@ header .wrapper {
 .nav_button button:active {
   background: rgba(255, 255, 255, 0.8);
 }
+
 .user-actions {
   display: flex;
   align-items: center;
@@ -139,6 +144,7 @@ header .wrapper {
   border: 1.8px solid rgba(255, 255, 255, 1);
   cursor: pointer;
 }
+
 .nav_button button.icon-circle:hover {
   background: rgba(255, 255, 255, 0.14);
 }
@@ -147,6 +153,7 @@ header .wrapper {
 #user-menu {
   display: none;
 }
+
 /* Wrapper chứa 2 nút và menu */
 .user-wrapper {
   position: relative;
@@ -165,7 +172,8 @@ header .wrapper {
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  top: calc(100% + 8px); /* cách 8px dưới cụm nút */
+  top: calc(100% + 8px);
+  /* cách 8px dưới cụm nút */
   right: 0;
   background: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -195,6 +203,7 @@ header .wrapper {
   justify-content: center;
   overflow: hidden;
 }
+
 /* --- PHẦN TÊN & EMAIL --- */
 #user-menu .user-info .user-name {
   display: flex;
@@ -243,6 +252,7 @@ header .wrapper {
   display: flex;
   gap: 5px;
 }
+
 #user-menu .menu-buttons .menu-item#btn-logout {
   font-style: normal;
   font-weight: 400;
@@ -259,96 +269,20 @@ header .wrapper {
   display: flex;
   gap: 5px;
 }
+
 #user-menu .menu-buttons .menu-item:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
-/* Hover effect specific to the logout button */
-#user-menu .menu-buttons .menu-item#btn-logout:hover {
-  background: rgba(255, 59, 48, 0.08); /* subtle red tint */
-  color: #ff3b30; /* red text */
-}
 
-/* Slightly emphasize icon/text when logout hovered */
-#user-menu .menu-buttons .menu-item#btn-logout:hover svg,
-#user-menu .menu-buttons .menu-item#btn-logout:hover img {
-  filter: brightness(0) saturate(100%) contrast(1.05);
-}
+@media screen and (max-width: 1180px) {
+  header {
+    .logo {
+      gap: 18px;
 
-/* Logout confirmation modal styles */
-.vk-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000000;
-}
-.vk-modal {
-  width: 500px; /* adjusted per request */
-  max-width: 92%;
-  background: #fff;
-  border-radius: 8px;
-  padding: 24px 28px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  text-align: center;
-}
-.vk-modal-icon {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 8px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #e7f3ff;
-  font-size: 0; /* reset since we use an image */
-}
-.vk-modal-icon img {
-  width: 56px;
-  height: 56px;
-  object-fit: contain;
-  display: block;
-}
-.vk-modal h2 {
-  margin: 8px 0 6px;
-  font-size: 20px;
-}
-.vk-modal-sub {
-  margin: 0 0 6px;
-  color: #333;
-}
-.vk-modal-note {
-  margin: 0 0 14px;
-  color: #666;
-  font-size: 15px; /* adjusted per request */
-}
-.vk-modal-actions {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-}
-.vk-btn {
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-}
-.vk-btn-outline {
-  background: #fff;
-  border: 1px solid #d0d0d0;
-  color: #333;
-}
-.vk-btn-danger {
-  background: #ff3b30;
-  color: #fff;
-  border: none;
-}
-.vk-btn:focus {
-  outline: 2px solid rgba(51, 130, 208, 0.2);
-}
+      img {
+        width: 52px;
+      }
 
 /* vk-modal-warning: single container between note and actions */
 .vk-modal-warning {
@@ -369,19 +303,56 @@ header .wrapper {
   margin: 12px auto;
 }
 
-.vk-modal-warning .vk-modal-warning-icon {
-  width: 29px;
-  height: 29px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    .nav_button {
+      gap: 60px;
+
+      ul {
+        gap: 39px;
+
+        li {
+          font-size: 13px;
+        }
+      }
+
+      button {
+        font-size: 15px;
+      }
+    }
+  }
 }
-.vk-modal-warning .vk-modal-warning-icon img {
-  width: 29px;
-  height: 29px;
-  object-fit: contain;
-  display: block;
+
+@media screen and (max-width: 990px) {
+  header {
+    .logo {
+      gap: 12px;
+
+      img {
+        width: 35px;
+      }
+
+      .text {
+        font-size: 17px;
+      }
+    }
+
+    .nav_button {
+      gap: 40px;
+
+      ul {
+        gap: 26px;
+
+        li {
+          font-size: 13px;
+        }
+      }
+
+      button {
+        font-size: 10px;
+      }
+    }
+  }
 }
+@media screen and (max-width: 900px) {
 
 .vk-modal-warning .vk-modal-warning-text {
   font-family: "Inter", sans-serif;

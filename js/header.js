@@ -249,28 +249,5 @@ if (manageBtn) {
     window.location.href = "./taikhoan.html";
   });
 }
-// --- Global logout link handler (fix immediate logout issue) ---
-function setupGlobalLogoutHandler() {
-  // Đảm bảo modal tồn tại trước khi hiển thị
-  ensureLogoutModalExists();
 
-  // Bắt tất cả click vào các phần tử có class .global-logout
-  document.addEventListener("click", (e) => {
-    const logoutLink = e.target.closest(".global-logout");
-    if (!logoutLink) return;
-
-    // ✅ Ngăn hành vi mặc định và chặn lan truyền
-    e.preventDefault();
-    e.stopImmediatePropagation();
-
-    // ✅ Hiển thị modal xác nhận đăng xuất
-    showLogoutModal();
-  });
-}
-
-// Gọi hàm khi DOM đã sẵn sàng
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", setupGlobalLogoutHandler);
-} else {
-  setupGlobalLogoutHandler();
-}
+let chieuDaiWeb = document.getElementById("b")
