@@ -1,0 +1,80 @@
+    *{
+        box-sizing:border-box;
+        font-family: 'Inter', sans-serif
+    }
+    body{
+        margin:0;
+        background:#f3f7fb
+    }
+    /* Container chính */
+    .container{
+        max-width:1354px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background:#fff;
+        border-radius:8px;
+        padding:22px;
+        box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+
+    /* Tiêu đề và mô tả */
+    .heading{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    .heading h2{
+        margin:0 0 6px 0;
+        font-size:36px;
+        font-weight: 500;
+    }
+    .heading p{
+        margin:0;
+        font-size: 16px;
+        font-weight: 400;
+        color:#6b7280}
+
+    /* Ô thống kê 3 cột */
+    .stats{display:flex;gap:18px;margin:18px 0}
+    .stat{flex:1;padding:18px;border-radius:8px;background:#f8fafc;border:1px solid #e6edf7}
+    .stat--green{border-color:#cfeee4}
+    .stat--red{border-color:#f3d6d6}
+    .stat .label{color:#6b7280;font-size:13px}
+    .stat .value{font-size:20px;margin-top:8px}
+
+    /* Tabs */
+    .tabs{
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .tabs button{
+        border-radius:10px;
+        border:1px solid #e6edf7;
+        background:#fff;
+        cursor:pointer;
+        width: 308px;
+        height: 50px;
+    }
+    .tabs button.active{
+        background:#1f73c7;
+        color:#fff;
+        border-color:#1f73c7;
+    }
+
+    /* Danh sách thông báo */
+    .list{margin-top:12px;border-top:1px solid #eef4fb}
+    .item{display:flex;padding:16px 12px;border-bottom:1px solid #f1f6fb;align-items:flex-start}
+    .avatar{width:36px;height:36px;border-radius:6px;background:#e6f0ff;display:flex;align-items:center;justify-content:center;margin-right:12px}
+    .item .title{font-weight:700;margin:0 0 6px 0}
+    .item .meta{margin:0;color:#6b7280;font-size:13px}
+
+    /* small badge for important */
+    .badge{background:#1f73c7;color:#fff;padding:2px 6px;border-radius:10px;font-size:12px;margin-left:8px}
+
+    /* simple placeholder icon */
+    .icon{width:18px;height:18px;background:#7fb3ff;border-radius:4px;display:inline-block}
+
+    /* trạng thái ẩn/hiện khi filter */
+    .hidden{display:none}

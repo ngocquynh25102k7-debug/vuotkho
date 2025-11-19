@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/thongbaonguoimua.css">
+  <title>Thông báo - Vượt Khó (Mockup)</title>
+   
+</head>
+<body>
+    <script src="./js/header.js" ></script>
+    <script src="./js/thongbaonguoimua.js"></script>
+  <div class="container">
+    <div class="heading">
+      <h2>Thông báo</h2>
+      <p>Bạn có 8 tin nhắn chưa đọc</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="label">Tổng thông báo</div>
+        <div class="value">25</div>
+      </div>
+      <div class="stat stat--green">
+        <div class="label">Chưa xem</div>
+        <div class="value">15</div>
+      </div>
+      <div class="stat stat--red">
+        <div class="label">Đã xem</div>
+        <div class="value">6</div>
+      </div>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Lọc thông báo">
+      <button id="tab-all" class="active" data-filter="all">Tất cả</button>
+      <button id="tab-unread" data-filter="unread">Chưa xem</button>
+      <button id="tab-read" data-filter="read">Đã xem</button>
+    </div>
+
+    <div class="list" id="notification-list">
+      <div class="item" data-status="unread">
+        <div class="avatar"><span class="icon" aria-hidden="true"></span></div>
+        <div>
+          <p class="title">Cập nhật về đơn hàng <span class="badge">mới</span></p>
+          <p class="meta">Đơn hàng của bạn đã được xác nhận</p>
+        </div>
+      </div>
+
+      <div class="item" data-status="unread">
+        <div class="avatar"><span class="icon" aria-hidden="true"></span></div>
+        <div>
+          <p class="title">Người dùng liên hệ</p>
+          <p class="meta"><strong>Nguyễn Trung Tin</strong> đã gửi tin nhắn cho bạn.</p>
+        </div>
+      </div>
+
+      <div class="item" data-status="read">
+        <div class="avatar"><span class="icon" aria-hidden="true"></span></div>
+        <div>
+          <p class="title">Người dùng liên hệ</p>
+          <p class="meta"><strong>Nguyễn Trung Tin</strong> đã gửi tin nhắn cho bạn.</p>
+        </div>
+      </div>
+
+      <div class="item" data-status="unread">
+        <div class="avatar"><span class="icon" aria-hidden="true"></span></div>
+        <div>
+          <p class="title">Người dùng liên hệ</p>
+          <p class="meta"><strong>Nguyễn Trung Tin</strong> đã gửi tin nhắn cho bạn.</p>
+        </div>
+      </div>
+
+      <div class="item" data-status="read">
+        <div class="avatar"><span class="icon" aria-hidden="true"></span></div>
+        <div>
+          <p class="title">Người dùng liên hệ</p>
+          <p class="meta"><strong>Nguyễn Trung Tin</strong> đã gửi tin nhắn cho bạn.</p>
+        </div>
+      </div>
+
+      <div class="item" data-status="read">
+        <div class="avatar"><span class="icon" aria-hidden="true"></span></div>
+        <div>
+          <p class="title">Người dùng liên hệ</p>
+          <p class="meta"><strong>Nguyễn Trung Tin</strong> đã gửi tin nhắn cho bạn.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
