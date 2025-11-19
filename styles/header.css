@@ -360,7 +360,7 @@ header .wrapper {
   transform: rotate(0deg);
   opacity: 1;
   border-width: 2px;
-  padding: 30px 54px;
+  padding: 30px 24px;
   background: #fefbea;
   border: 2px solid #c4b48c80;
   display: flex;
@@ -390,5 +390,4 @@ header .wrapper {
   line-height: 24px;
   color: #c5a649;
   text-align: left;
-  margin-left: 12px;
 }

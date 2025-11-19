@@ -139,7 +139,7 @@ function ensureLogoutModalExists() {
   <div class="vk-modal-icon"><img src="${LOGOUT_ICON}" alt="logout icon" onerror="this.onerror=null;this.src='./assets/icons/out.png'"/></div>
       <h2 id="logout-title">Xác nhận đăng xuất</h2>
       <p class="vk-modal-sub">Tài khoản: <strong id="logout-username">User</strong></p>
-      <p class="vk-modal-note">Bạn có chắc chắn muốn đăng xuất khỏi hệ thống? Bạn sẽ cần đăng nhập lại để tiếp tục.</p>
+      <p class="vk-modal-note">Bạn có chắc chắn muốn đăng xuất khỏi hệ thống? <br>Bạn sẽ cần đăng nhập lại để tiếp tục.</p>
 
       <div class="vk-modal-warning">
         <div class="vk-modal-warning-icon"><img src="./assets/icons/warningIcon.png" alt="warning" onerror="this.onerror=null;this.src='./assets/icons/warningIcon.png'"/></div>
