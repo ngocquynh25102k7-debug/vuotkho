@@ -84,7 +84,9 @@ header .wrapper {
 
 /* Button styles */
 .nav_button button {
-  padding: 10px 20px;
+  width: 145px;
+  justify-content: center;
+  padding: 10px 0;
   border: 2px solid #ffffff;
   border-radius: 8px;
   background: transparent;
