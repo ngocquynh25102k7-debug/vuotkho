@@ -26,7 +26,7 @@ let footerInnerHTML = ` <div class="logo">
                 </li>
                 <li class="text">
                     <div class="icon"><img src="./assets/icons/location_on.png" alt=""></div>
-                    Nguyễn Văn Bảo, P1, Gò<br> Vấp, Tp HCM.
+                    Nguyễn Văn Bảo, Phường Hạnh Thông, Tp HCM.
                 </li>
             </ul>
         </div>

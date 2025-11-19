@@ -1,0 +1,128 @@
+:root {
+  --bg: #f2f6ff;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --primary: #1f7ed0;
+  --accent: #05aa6c;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+
+.page-add {
+  max-width: 1440px;
+  margin: auto;
+  padding: 32px 20px;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(16, 24, 40, 0.06);
+  overflow: hidden;
+  border: 1px solid rgba(16, 24, 40, 0.04);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.04);
+}
+
+.card-header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid rgba(31, 126, 208, 0.12);
+}
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+
+.add-form {
+  padding: 20px 24px 28px;
+  display: block;
+}
+.add-form .row {
+  margin-bottom: 14px;
+}
+.add-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.add-form input[type="text"],
+.add-form input[type="date"],
+.add-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(16, 24, 40, 0.08);
+  background: #fff;
+  font-size: 14px;
+  color: #111827;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.two-col .col {
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+}
+.actions .btn {
+  flex: 1;
+}
+
+@media (max-width: 720px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    margin: 0 8px;
+  }
+  .card-header h1 {
+    font-size: 18px;
+  }
+}
+
+/* small helper styles */
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
