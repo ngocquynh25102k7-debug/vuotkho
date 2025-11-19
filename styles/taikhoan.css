@@ -73,6 +73,7 @@
 }
 
 .hero_right-info {
+<<<<<<< HEAD
   height: 739px;
   width: 974px;
   display: flex;
@@ -103,6 +104,43 @@
   align-items: center;
   gap: 9px;
   padding-left: 107px;
+=======
+    height: 739px;
+    width: 974px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.hero_right-info-1 {
+    padding: 0px 4px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero_right-info-1 h2 {
+    height: 44px;
+    font-size: 36px;
+    font-weight: 700;
+    padding:0px 38px 0px 55px;
+}
+
+.hero_right-info-1 p {
+    padding: 0px 4px;
+    font-size: 26px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding-left: 107px;
+    height: 64px;
+}
+.hero_right-info-1 img{
+    height: 60px;
+    width: 60px;
+>>>>>>> 45b367d60027551205e7aa1da0d2aed11556d217
 }
 
 .hero_right-info-2 {
@@ -117,11 +155,19 @@
 }
 
 .form-item {
+<<<<<<< HEAD
   height: 114px;
   width: 358px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+=======
+    height: 84px;
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+>>>>>>> 45b367d60027551205e7aa1da0d2aed11556d217
 }
 
 label {
@@ -184,3 +230,11 @@ input {
     padding: 14px 18px;
   }
 }
+<<<<<<< HEAD
+=======
+.form-item p{
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 12px;
+}
+>>>>>>> 45b367d60027551205e7aa1da0d2aed11556d217

@@ -4,6 +4,7 @@ header {
   position: relative;
   z-index: 100;
 }
+
 header .wrapper {
   max-width: 1440px;
   margin: auto;
@@ -17,6 +18,7 @@ header .wrapper {
 }
 
 .logo {
+  gap: 24px;
   display: flex;
   align-items: center;
 }
@@ -28,7 +30,6 @@ header .wrapper {
 }
 
 .logo .text {
-  width: 191px;
   height: 42px;
   font-style: normal;
   font-weight: 600;
@@ -77,6 +78,7 @@ header .wrapper {
   color: #ffffff;
   background: rgba(255, 255, 255, 0.2);
 }
+
 .nav_button ul li a.active:hover {
   background: rgba(255, 255, 255, 0.2);
   color: #1f2256;
@@ -84,7 +86,9 @@ header .wrapper {
 
 /* Button styles */
 .nav_button button {
-  padding: 10px 20px;
+  padding: 10px 0;
+  width: 145px;
+  justify-content: center;
   border: 2px solid #ffffff;
   border-radius: 8px;
   background: transparent;
@@ -122,6 +126,7 @@ header .wrapper {
 .nav_button button:active {
   background: rgba(255, 255, 255, 0.8);
 }
+
 .user-actions {
   display: flex;
   align-items: center;
@@ -139,6 +144,7 @@ header .wrapper {
   border: 1.8px solid rgba(255, 255, 255, 1);
   cursor: pointer;
 }
+
 .nav_button button.icon-circle:hover {
   background: rgba(255, 255, 255, 0.14);
 }
@@ -147,6 +153,7 @@ header .wrapper {
 #user-menu {
   display: none;
 }
+
 /* Wrapper chứa 2 nút và menu */
 .user-wrapper {
   position: relative;
@@ -165,7 +172,8 @@ header .wrapper {
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  top: calc(100% + 8px); /* cách 8px dưới cụm nút */
+  top: calc(100% + 8px);
+  /* cách 8px dưới cụm nút */
   right: 0;
   background: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -195,6 +203,7 @@ header .wrapper {
   justify-content: center;
   overflow: hidden;
 }
+
 /* --- PHẦN TÊN & EMAIL --- */
 #user-menu .user-info .user-name {
   display: flex;
@@ -243,6 +252,7 @@ header .wrapper {
   display: flex;
   gap: 5px;
 }
+
 #user-menu .menu-buttons .menu-item#btn-logout {
   font-style: normal;
   font-weight: 400;
@@ -259,10 +269,12 @@ header .wrapper {
   display: flex;
   gap: 5px;
 }
+
 #user-menu .menu-buttons .menu-item:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
+<<<<<<< HEAD
 /* Hover effect specific to the logout button */
 #user-menu .menu-buttons .menu-item#btn-logout:hover {
   background: rgba(255, 59, 48, 0.08); /* subtle red tint */
@@ -349,6 +361,17 @@ header .wrapper {
 .vk-btn:focus {
   outline: 2px solid rgba(51, 130, 208, 0.2);
 }
+=======
+
+@media screen and (max-width: 1180px) {
+  header {
+    .logo {
+      gap: 18px;
+
+      img {
+        width: 52px;
+      }
+>>>>>>> 45b367d60027551205e7aa1da0d2aed11556d217
 
 /* vk-modal-warning: single container between note and actions */
 .vk-modal-warning {
@@ -360,7 +383,11 @@ header .wrapper {
   transform: rotate(0deg);
   opacity: 1;
   border-width: 2px;
+<<<<<<< HEAD
   padding: 30px 54px;
+=======
+  padding: 30px 24px;
+>>>>>>> 45b367d60027551205e7aa1da0d2aed11556d217
   background: #fefbea;
   border: 2px solid #c4b48c80;
   display: flex;
@@ -369,6 +396,7 @@ header .wrapper {
   margin: 12px auto;
 }
 
+<<<<<<< HEAD
 .vk-modal-warning .vk-modal-warning-icon {
   width: 29px;
   height: 29px;
@@ -382,6 +410,58 @@ header .wrapper {
   object-fit: contain;
   display: block;
 }
+=======
+    .nav_button {
+      gap: 60px;
+
+      ul {
+        gap: 39px;
+
+        li {
+          font-size: 13px;
+        }
+      }
+
+      button {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  header {
+    .logo {
+      gap: 12px;
+
+      img {
+        width: 35px;
+      }
+
+      .text {
+        font-size: 17px;
+      }
+    }
+
+    .nav_button {
+      gap: 40px;
+
+      ul {
+        gap: 26px;
+
+        li {
+          font-size: 13px;
+        }
+      }
+
+      button {
+        font-size: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+>>>>>>> 45b367d60027551205e7aa1da0d2aed11556d217
 
 .vk-modal-warning .vk-modal-warning-text {
   font-family: "Inter", sans-serif;
@@ -390,5 +470,8 @@ header .wrapper {
   line-height: 24px;
   color: #c5a649;
   text-align: left;
+<<<<<<< HEAD
   margin-left: 12px;
+=======
+>>>>>>> 45b367d60027551205e7aa1da0d2aed11556d217
 }
