@@ -4,50 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/dangnhap.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title> Đăng nhập </title>
 </head>
 <body>
     <header>
         
     </header>
     <script src="./js/header.js" ></script>
+    <script src="./js/dangnhap.js"></script>
     <main class="auth-wrapper">
         <div class="auth-container">
             <div class="auth-left">
                 <img src="assets/images/pages/dangnhap/background.png" class="logo-color">
             </div>
 
-            <div class="auth-box">
-                <form>
-                    <div class="login-container">
-                        <h1> ĐĂNG NHẬP </h1>
+            <div class="auth-right">
+                <div class="auth-box">
+                    <form>
+                        <div class="name-login">
+                            <h1> ĐĂNG NHẬP </h1> 
+                        </div>
                         <div class="form-row">
                             <label class="username"> Tên tài khoản </label>
                             <input type="text" class="input-field">
-                    </div>
-                    <div class="form-row">
-                        <label class="password"> Mật khẩu </label>
-                        <input type="password" class="input-field">
-                    </div>
-                    </div>
-            <div class="auth-box size">
-                    <div class="checkbox-row forgot-password">
-                        <a href="#" class="color-btn-password"> Quên mật khẩu?</a>
-                    </div>
-                    <div class="checkbox-row">
-                        <label class="checkbox"><input type="checkbox"> Lưu thông tin </label>
-                    </div>
-            </div>
-                    <button class="btn-login"> Đăng nhập </button>
-                    <div class="divider">Hoặc</div>
+                        </div>
+                        <div class="form-row">
+                            <label class="password"> Mật khẩu </label>
+                            <input type="password" class="input-field">
+                        </div>
+                        
+                        <div class="checkbox-row forgot-password">
+                            <a href="#" class="color-btn-password"> Quên mật khẩu?</a>
+                        </div>
+                        <div class="checkbox-row">
+                            <input type="checkbox" id="check">
+                            <label class="checkbox" for="check"> Lưu thông tin </label>
+                        </div>
 
-                    <button type="button" class="btn-google">
-                        <img src="assets/images/pages/dangnhap/free-icon-google.png" alt="Google" class="icon-gg"> Đăng nhập bằng Google </button>
-                    <div class="register-row"> Chưa có tài khoản? <a href="#"> Đăng ký </a></div>
-                </form>
+                        <button class="btn-login"><a href="index.html" class="login"> Đăng nhập </a></button>
+                        <div class="divider">Hoặc</div>
+
+                        <button type="button" class="btn-google">
+                            <img src="assets/images/pages/dangnhap/free-icon-google.png" alt="Google" class="icon-gg"> Đăng nhập bằng Google </button>
+                            <div class="register-row"> Chưa có tài khoản? <a href="dangky.html"> Đăng ký </a></div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>

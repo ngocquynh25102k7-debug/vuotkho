@@ -1,0 +1,376 @@
+main {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+}
+main .wrapper {
+  max-width: 1440px;
+  margin: auto;
+  background-color: #f2f6ff;
+  width: 100%;
+  padding-bottom: 7px;
+}
+main .wrapper .user--information {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 51px;
+}
+main .wrapper .user--information .avatar img {
+  width: 48px;
+  height: 48px;
+}
+main .wrapper .user--information .user--account .user--name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+}
+
+main .wrapper .user--information .user--account .user--email {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 4px;
+  color: #868080;
+}
+
+.box--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 47px 0 44px;
+  margin-bottom: 62px;
+}
+
+.box--item {
+  box-sizing: border-box;
+  width: 311px;
+  height: 133px;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  transition: box-shadow 0.2s ease;
+}
+.box--item:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+.border--total {
+  border-color: #a3caf2;
+}
+.border--active {
+  border-color: #89d9a6;
+}
+.border--pending {
+  border-color: #eba49d;
+}
+.border--overdue {
+  border-color: #e4a8cc;
+}
+
+.box--item p {
+  position: relative;
+  left: 22px;
+  top: 13px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9d9d9d;
+  z-index: 0;
+}
+.box--item .count {
+  position: relative;
+  left: 22px;
+  top: 71px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+.count.total {
+  color: #a3caf2;
+}
+.count.active {
+  color: #89d9a6;
+}
+.count.pending {
+  color: #eba49d;
+}
+.count.overdue {
+  color: #e4a8cc;
+}
+.action--bar {
+  width: 1351px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 23px;
+  border-radius: 12px 12px 0 0;
+  border: 2px solid #e3edf8;
+  background-color: #fbfcff;
+}
+.search_status {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+}
+
+.search img {
+  padding: 8px;
+  position: absolute;
+  top: auto;
+  pointer-events: none;
+}
+
+.search input {
+  border-radius: 12px;
+  border: 1px solid #ddeaff;
+
+  padding: 10.5px 18px 10.5px 30px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #696f79;
+  width: 244px;
+}
+
+.choices__inner {
+  height: 29px !important;
+  min-height: 29px !important;
+  font-size: 14px !important;
+  color: #333 !important;
+  background: #ffffff !important;
+  border: 1px solid #ddeaff !important;
+  border-radius: 12px !important;
+  padding: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.choices__list--single {
+  display: flex !important;
+  gap: 5px;
+}
+
+.choices__list--dropdown {
+  background: #ffffff;
+  border: 1px solid #ddeaff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 4px;
+}
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  background-color: #fff !important ;
+  border: 1px solid #ddeaff !important ;
+  top: 100% !important ;
+  margin-top: 3px !important ;
+  border-radius: 10px !important ;
+  word-break: normal !important ;
+}
+
+.choices__list--dropdown .choices__item--dropdown.is-highlighted {
+  border-radius: 6px !important ;
+  font-style: normal !important ;
+  font-weight: 400 !important ;
+  font-size: 11px !important ;
+  line-height: 13px !important ;
+  text-align: center !important ;
+  color: #000000 !important ;
+}
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: #ddeaff !important;
+  border-radius: 6px !important ;
+}
+
+.choices__list[aria-expanded] {
+  padding: 6px;
+}
+
+.status--filter .choices[data-type*="select-one"]::after {
+  content: "";
+  border: none;
+  background-image: url("../assets/icons/down-arrow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+
+  position: absolute;
+  right: 8px;
+  margin-top: -5px;
+}
+#addBtn {
+  margin-right: 27px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 17px;
+  width: 179px;
+  height: 36px;
+  background: #3382d0;
+  box-shadow: 0px 4px 4px #cdc9c9;
+  border-radius: 10px;
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+#addBtn:hover {
+  transform: translateY(-3px);
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.table-wrapper {
+  width: 1351px;
+  background: #fbfcff;
+  border: 2px solid #e3edf8;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+
+  /* QUAN TRỌNG: Bắt các cột tuân theo width */
+  table-layout: fixed;
+}
+
+.table-wrapper thead tr {
+  width: 100%;
+  background-color: #fbfcff !important;
+  border-bottom: 2px solid #eaeaea;
+
+  /* XÓA: display: inline-flex */
+  /* XÓA: justify-content */
+  /* XÓA: padding: 0 29px */
+}
+
+.table-wrapper #customerTable tr {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+.table-wrapper #customerTable tr:hover {
+  background-color: #fbfcff;
+}
+/* GIỮ NGUYÊN STYLE HEADER CỦA BẠN */
+.table-wrapper th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 24px;
+  color: #000000;
+  padding: 28px 20px; /* Sửa lại padding cho chuẩn */
+  word-break: break-word; /* Nếu chữ quá dài, tự xuống hàng */
+}
+
+/* SỬA: Style cho ô dữ liệu (td) */
+.table-wrapper td {
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  padding: 16px 28px;
+  vertical-align: middle;
+  word-break: break-word; /* Nếu chữ quá dài, tự xuống hàng */
+
+  /* XÓA: display: flex (Lỗi chính) */
+  /* XÓA: gap: 38px */
+}
+
+/* THÊM: Chỉ áp dụng flex cho cột "button" */
+.table-wrapper td.button {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  padding-left: 29px !important;
+}
+
+.table-wrapper tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* THÊM: GÁN WIDTH CỐ ĐỊNH CHO TỪNG CỘT (QUAN TRỌNG NHẤT) */
+
+/* Gán width: mặc định 16% cho mỗi cột, ngoại trừ cột có 3 chữ (cột 2) được nhận thêm 4% */
+.table-wrapper th:nth-child(1),
+.table-wrapper td:nth-child(1) {
+  width: 16%;
+}
+.table-wrapper th:nth-child(2),
+.table-wrapper td:nth-child(2) {
+  width: 20%;
+}
+.table-wrapper th:nth-child(3),
+.table-wrapper td:nth-child(3) {
+  width: 16%;
+}
+.table-wrapper th:nth-child(4),
+.table-wrapper td:nth-child(4) {
+  width: 16%;
+}
+.table-wrapper th:nth-child(5),
+.table-wrapper td:nth-child(5) {
+  width: 16%;
+}
+.table-wrapper th:nth-child(6),
+.table-wrapper td:nth-child(6) {
+  width: 16%;
+}
+
+/* Đảm bảo header cột 'Tên khách hàng' không xuống dòng */
+.table-wrapper th:nth-child(2) {
+  white-space: nowrap;
+  overflow: visible;
+}
+
+/* Style cho các nút Sửa/Xóa */
+.action-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 4px;
+}
+.action-btn:hover {
+  opacity: 0.7;
+}
+
+/* Style cho cột "Trạng thái" (Dùng class từ JS) */
+.table-wrapper .status-active {
+  color: #3382d0;
+  font-weight: 500;
+}
+.table-wrapper .status-pending {
+  color: #ffc107; /* Vàng */
+  font-weight: 500;
+}
+.table-wrapper .status-overdue {
+  color: #fa3636; /* Đỏ */
+  font-weight: 500;
+}
