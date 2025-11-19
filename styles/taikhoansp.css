@@ -73,7 +73,7 @@
 }
 
 .hero-list {
-    height: 805px;
+    height: 889px;
     width: 965px;
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@
 
 .item {
     width: 247px;
-    height: 350px;
+    height: 392px;
     border-radius: 12px;
     background-color: rgb(255, 255, 255);
     overflow: hidden;
@@ -134,7 +134,7 @@
 
     .item--img {
         width: 247px;
-        height: 142px;
+        height: 226px;
         background-color: #DDDBE8;
     }
 
@@ -149,10 +149,10 @@
 
         .item--box {
             width: 187px;
-            height: 179px;
+            height: 144px;
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 3px;
 
             .item--tag {
                 width: 93px;
@@ -174,11 +174,11 @@
 
             .item--letter {
                 width: 187px;
-                height: 54px;
+                height: 38px;
 
                 p {
                     font-weight: 400;
-                    font-size: 22px;
+                    font-size: 16px;
 
                 }
 
@@ -209,10 +209,10 @@
 
             a {
                 width: 187px;
-                height: 46px;
+                height: 36px;
                 background-color: #ffffff;
                 border-radius: 8px;
-                font-size: 16px;
+                font-size: 14px;
                 font-weight: 600;
                 color: #3382D0;
                 border: 1px solid #3382D0;
@@ -220,6 +220,7 @@
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+                text-decoration: none;
             }
 
             a:hover {
@@ -257,7 +258,7 @@
     row-gap: 26px;
 }
 .hero-card-track-wrapper {
-    height: 726px;      /* chỉnh tùy bố cục bạn muốn */
+    height: 810px;      /* chỉnh tùy bố cục bạn muốn */
     overflow-y: auto;
 
     &::-webkit-scrollbar {
