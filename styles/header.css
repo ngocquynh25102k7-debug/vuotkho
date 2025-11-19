@@ -284,10 +284,24 @@ header .wrapper {
         width: 52px;
       }
 
-      .text {
-        font-size: 26px;
-      }
-    }
+/* vk-modal-warning: single container between note and actions */
+.vk-modal-warning {
+  box-sizing: border-box;
+  width: 404px; /* adjusted per request */
+  height: 69px;
+  border-radius: 16px;
+  gap: 10px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border-width: 2px;
+  padding: 30px 24px;
+  background: #fefbea;
+  border: 2px solid #c4b48c80;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 12px auto;
+}
 
     .nav_button {
       gap: 60px;
@@ -340,4 +354,11 @@ header .wrapper {
 }
 @media screen and (max-width: 900px) {
 
+.vk-modal-warning .vk-modal-warning-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15px; /* adjusted per request */
+  line-height: 24px;
+  color: #c5a649;
+  text-align: left;
 }
