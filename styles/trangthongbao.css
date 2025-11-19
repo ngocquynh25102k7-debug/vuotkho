@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+main {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+}
+main .wrapper {
+  max-width: 1440px;
+  margin: auto;
+  background-color: #f2f6ff;
+  width: 100%;
+  padding-bottom: 7px;
+}
+main .wrapper .user--information {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 51px;
+}
+main .wrapper .user--information .avatar img {
+  width: 48px;
+  height: 48px;
+}
+main .wrapper .user--information .user--account .user--name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+}
+main .wrapper .user--information .user--account .text{
+    font-size: 16px;
+    font-weight: 400;
+    color: #868080;
+}
+main .wrapper .user--information .user--account .user--email {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 4px;
+  color: #868080;
+}
+
+.box--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 47px 0 44px;
+  margin-bottom: 62px;
+  
+}
+
+.box--item {
+  box-sizing: border-box;
+  width: 434.76px;
+  height: 133px;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  transition: box-shadow 0.2s ease;
+}
+.box--item:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+.border--total {
+  border-color: #a3caf2;
+}
+.border--active {
+  border-color: #89d9a6;
+}
+.border--pending {
+  border-color: #eba49d;
+}
+.border--overdue {
+  border-color: #e4a8cc;
+}
+
+.box--item p {
+  position: relative;
+  left: 22px;
+  top: 13px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9d9d9d;
+  z-index: 0;
+}
+.box--item .count {
+  position: relative;
+  left: 22px;
+  top: 71px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+.count.total {
+  color: #a3caf2;
+}
+.count.active {
+  color: #89d9a6;
+}
+.count.pending {
+  color: #eba49d;
+}
+.count.overdue {
+  color: #e4a8cc;
+}
+.table{
+    height: 868px;
+    width: 100%;
+    padding: 0px 39px;
+}
+.info{
+    background-color: #FBFCFF;
+    width: 1354px;
+    border-radius: 12px;
+}
+.table-nav{
+    height: 80px;
+    width: 1354px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 54px;
+    gap: 98px;
+    
+    border-radius: 12px;
+    border: 2px solid #E3EDF8;
+
+}
+.table-nav a{
+    text-decoration: none;
+    height: 50px;
+    width: 308px;
+    border-radius: 10px;
+    border: 1px solid #ABABAB;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table-nav a:hover{
+    background-color: #3382D0;
+    color: white;
+}
+.item{
+    height: 114px;
+    width: 1330px;
+    padding: 14px 30px;
+    border: 1px solid #E3EDF8 ;
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+.icon-title{
+    display: flex;
+    gap: 11px;
+}
+.icon-title img:nth-of-type(2){
+    height: 7px;
+    width: 7px;
+}
+.title{
+    font-size: 24px;
+    font-weight: 600;
+}
+.bold {
+    font-weight: 700;
+}
+.sub{
+    font-weight: 300;
+}
+.list{
+    height: 788px;
+    width: 1354px;      /* chỉnh tùy bố cục bạn muốn */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
