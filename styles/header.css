@@ -274,7 +274,6 @@ header .wrapper {
   background: rgba(0, 0, 0, 0.05);
 }
 
-<<<<<<< HEAD
 /* Hover effect specific to the logout button */
 #user-menu .menu-buttons .menu-item#btn-logout:hover {
   background: rgba(255, 59, 48, 0.08); /* subtle red tint */
@@ -361,17 +360,6 @@ header .wrapper {
 .vk-btn:focus {
   outline: 2px solid rgba(51, 130, 208, 0.2);
 }
-=======
-
-@media screen and (max-width: 1180px) {
-  header {
-    .logo {
-      gap: 18px;
-
-      img {
-        width: 52px;
-      }
->>>>>>> 45b367d60027551205e7aa1da0d2aed11556d217
 
 /* vk-modal-warning: single container between note and actions */
 .vk-modal-warning {
@@ -383,11 +371,7 @@ header .wrapper {
   transform: rotate(0deg);
   opacity: 1;
   border-width: 2px;
-<<<<<<< HEAD
   padding: 30px 54px;
-=======
-  padding: 30px 24px;
->>>>>>> 45b367d60027551205e7aa1da0d2aed11556d217
   background: #fefbea;
   border: 2px solid #c4b48c80;
   display: flex;
@@ -396,7 +380,6 @@ header .wrapper {
   margin: 12px auto;
 }
 
-<<<<<<< HEAD
 .vk-modal-warning .vk-modal-warning-icon {
   width: 29px;
   height: 29px;
@@ -410,58 +393,6 @@ header .wrapper {
   object-fit: contain;
   display: block;
 }
-=======
-    .nav_button {
-      gap: 60px;
-
-      ul {
-        gap: 39px;
-
-        li {
-          font-size: 13px;
-        }
-      }
-
-      button {
-        font-size: 15px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 990px) {
-  header {
-    .logo {
-      gap: 12px;
-
-      img {
-        width: 35px;
-      }
-
-      .text {
-        font-size: 17px;
-      }
-    }
-
-    .nav_button {
-      gap: 40px;
-
-      ul {
-        gap: 26px;
-
-        li {
-          font-size: 13px;
-        }
-      }
-
-      button {
-        font-size: 10px;
-      }
-    }
-  }
-}
-@media screen and (max-width: 900px) {
->>>>>>> 45b367d60027551205e7aa1da0d2aed11556d217
 
 .vk-modal-warning .vk-modal-warning-text {
   font-family: "Inter", sans-serif;
@@ -470,8 +401,5 @@ header .wrapper {
   line-height: 24px;
   color: #c5a649;
   text-align: left;
-<<<<<<< HEAD
   margin-left: 12px;
-=======
->>>>>>> 45b367d60027551205e7aa1da0d2aed11556d217
 }
