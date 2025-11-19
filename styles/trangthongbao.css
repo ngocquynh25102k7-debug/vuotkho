@@ -151,6 +151,7 @@ main .wrapper .user--information .user--account .user--email {
 .table-nav a:hover{
     background-color: #3382D0;
     color: white;
+    cursor: pointer;
 }
 .item{
     height: 114px;
