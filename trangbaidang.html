@@ -142,7 +142,7 @@
     <footer></footer>
     <script src="./js/footer.js"></script>
     <script>
-      (function() {
+      (function () {
         let fileName = [];
         const fileInput = document.getElementById("fileInput");
         fileInput.addEventListener("change", (event) => {
@@ -167,14 +167,108 @@
             alert("Bạn chỉ có thể tải lên tối đa 5 hình ảnh.");
             return;
           }
-          if (fileName.findIndex((name) => name === files[0].name) === -1) {
-            for (let i = 0; i < files.length; i++) {
-              fileName.push(files[i].name);
+          for (let i = 0; i < files.length; i++) {
+            if (fileName.includes(files[i].name)) {
+              alert("Một hoặc nhiều hình ảnh đã được chọn trước đó.");
+              return;
             }
-          } else {
-            alert("Hình ảnh đã được chọn trước đó.");
+          }
+          const moreImgDiv = document.querySelector(".more--img");
+          moreImgDiv.style.display = "flex";
+          moreImgDiv.style.alignItems = "center";
+          moreImgDiv.style.gap = "12px";
+          const tagA = moreImgDiv.querySelector("a");
+          if (tagA) {
+            tagA.remove();
+          }
+          const oldplusDiv = document.getElementById("plusDiv");
+          if (oldplusDiv) {
+            oldplusDiv.remove();
+          }
+          for (let i = 0; i < files.length; i++) {
+            fileName.push(files[i].name);
+            const divnewImg = document.createElement("div");
+            divnewImg.style.display = "inline-flex";
+            divnewImg.style.position = "relative";
+
+            const newImg = document.createElement("img");
+            newImg.src = URL.createObjectURL(files[i]);
+            newImg.alt = files[i].name;
+            newImg.style.width = "200px";
+            newImg.style.height = "200px";
+            
+            newImg.style.objectFit = "cover";
+            newImg.style.borderRadius = "8px";
+            newImg.style.position = "relative";
+            divnewImg.appendChild(newImg);
+
+            const removeBtn = document.createElement("div");
+            removeBtn.innerText = "x";
+            removeBtn.style.position = "absolute";
+            removeBtn.style.top = "2px";
+            removeBtn.style.right = "6px";
+            removeBtn.style.backgroundColor = "rgba(0,0,0,0.5)";
+            removeBtn.style.color = "white";
+            removeBtn.style.borderRadius = "50%";
+            removeBtn.style.width = "20px";
+            removeBtn.style.height = "20px";
+            removeBtn.style.display = "flex";
+            removeBtn.style.justifyContent = "center";
+            removeBtn.style.alignItems = "center";
+            removeBtn.style.cursor = "pointer";
+            removeBtn.onclick = (e) => {
+              const index = fileName.indexOf(e.target.parentElement.querySelector("img").alt);
+              if (index > -1) {
+          fileName.splice(index, 1);
+              }
+              e.target.parentElement.remove();
+              const plusDiv = document.getElementById("plusDiv");
+              if (!plusDiv && fileName.length < 5) {
+          const newPlusDiv = document.createElement("div");
+          newPlusDiv.id = "plusDiv";
+          newPlusDiv.style.width = "200px";
+          newPlusDiv.style.height = "200px";
+          newPlusDiv.style.display = "flex";
+          newPlusDiv.style.justifyContent = "center";
+          newPlusDiv.style.alignItems = "center";
+          newPlusDiv.style.border = "2px dashed #C4C4C4";
+          newPlusDiv.style.borderRadius = "8px";
+          newPlusDiv.style.cursor = "pointer";
+          newPlusDiv.innerHTML = `+`;
+          newPlusDiv.onclick = () => {
+            document.getElementById("fileInput").click();
+          };
+          moreImgDiv.appendChild(newPlusDiv);
+              }
+              document.querySelector(".kit p").innerText = `${fileName.length}/5`;
+              console.log(fileName);
+            };
+            divnewImg.appendChild(removeBtn);
+            moreImgDiv.appendChild(divnewImg);
+          }
+          const tagInput = moreImgDiv.querySelector("input");
+          tagInput.style.zIndex = "-100";
+          if (fileName.length < 5) {
+            const plusDiv = document.createElement("div");
+            plusDiv.id = "plusDiv";
+            plusDiv.style.width = "200px";
+            plusDiv.style.height = "200px";
+            plusDiv.style.display = "flex";
+            plusDiv.style.justifyContent = "center";
+            plusDiv.style.alignItems = "center";
+            plusDiv.style.border = "2px dashed #C4C4C4";
+            plusDiv.style.borderRadius = "8px";
+            plusDiv.style.cursor = "pointer";
+            plusDiv.innerHTML = `+`;
+            plusDiv.onclick = () => {
+              document.getElementById("fileInput").click();
+            };
+            moreImgDiv.appendChild(plusDiv);
           }
           document.querySelector(".kit p").innerText = `${fileName.length}/5`;
+          console.log(fileName);
+          // Reset the file input to allow selecting the same file again
+          fileInput.value = '';
         });
 
         if (!session) {
@@ -184,18 +278,19 @@
         if (session && (!session.email || !session.phone)) {
           try {
             const accounts = JSON.parse(
-            localStorage.getItem("vk_accounts") || "[]"
+              localStorage.getItem("vk_accounts") || "[]"
             );
             const acc = accounts.find(
-            (a) =>
-              a.id == session.accountId || a.accountName === session.accountName
+              (a) =>
+                a.id == session.accountId ||
+                a.accountName === session.accountName
             );
             if (acc) {
-            session.email = session.email || acc.email || "";
-            session.phone = session.phone || acc.phone || "";
-            session.fullName = session.fullName || acc.fullName || "";
-            // persist updated session so subsequent loads have email/phone
-            localStorage.setItem("vk_session", JSON.stringify(session));
+              session.email = session.email || acc.email || "";
+              session.phone = session.phone || acc.phone || "";
+              session.fullName = session.fullName || acc.fullName || "";
+              // persist updated session so subsequent loads have email/phone
+              localStorage.setItem("vk_session", JSON.stringify(session));
             }
           } catch (e) {
             // ignore parse errors
