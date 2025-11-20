@@ -49,7 +49,7 @@ const authHtml = session
   ? `
     <div class="user-wrapper">
         <div class="user-actions">
-            <button class="icon-circle noti-btn">
+            <button onclick="window.location.href='./trangthongbao.html'" class="icon-circle noti-btn">
                 <img src="./assets/icons/noti.png" alt="notification icon">
             </button>
             <button class="icon-circle user-btn" id="user-btn" aria-haspopup="true" aria-expanded="false">
@@ -105,13 +105,13 @@ let headerInnerHTML = `
                 <ul>
                     <li class="nav_bar"><a href="index.html" class="${isActivePage(
                       "index.html"
-                    )}">Trang chủ</a></li>
+                    )}" data-translate="Trang chủ">Trang chủ</a></li>
                     <li class="nav_bar"><a href="trangbaidang.html" class="${isActivePage(
                       "trangbaidang.html"
-                    )}">Bài đăng</a></li>
+                    )}" data-translate="Đăng bài">Đăng bài</a></li>
                     <li class="nav_bar"><a href="timkiem.html" class="${isActivePage(
                       "timkiem.html"
-                    )}">Giao dịch</a></li>
+                    )}" data-translate="Tìm kiếm">Tìm kiếm</a></li>
                 </ul>
             </nav>
             ${authHtml}
@@ -138,18 +138,18 @@ function ensureLogoutModalExists() {
   <div id="logout-modal" class="vk-modal-overlay" style="display:none">
     <div class="vk-modal" role="dialog" aria-modal="true" aria-labelledby="logout-title">
   <div class="vk-modal-icon"><img src="${LOGOUT_ICON}" alt="logout icon" onerror="this.onerror=null;this.src='./assets/icons/out.png'"/></div>
-      <h2 id="logout-title">Xác nhận đăng xuất</h2>
-      <p class="vk-modal-sub">Tài khoản: <strong id="logout-username">User</strong></p>
-      <p class="vk-modal-note">Bạn có chắc chắn muốn đăng xuất khỏi hệ thống?<br> Bạn sẽ cần đăng nhập lại để tiếp tục.</p>
+      <h2 id="logout-title" data-translate="Xác nhận đăng xuất">Xác nhận đăng xuất</h2>
+      <p class="vk-modal-sub"><span data-translate="Tài khoản:">Tài khoản:</span> <strong id="logout-username">User</strong></p>
+      <p class="vk-modal-note" data-translate="Bạn có chắc chắn muốn đăng xuất khỏi hệ thống? Bạn sẽ cần đăng nhập lại để tiếp tục.">Bạn có chắc chắn muốn đăng xuất khỏi hệ thống?<br> Bạn sẽ cần đăng nhập lại để tiếp tục.</p>
 
       <div class="vk-modal-warning">
         <div class="vk-modal-warning-icon"><img src="./assets/icons/warningIcon.png" alt="warning" onerror="this.onerror=null;this.src='./assets/icons/warningIcon.png'"/></div>
-        <div class="vk-modal-warning-text">Hãy đảm bảo bạn đã lưu toàn bộ công việc</div>
+        <div class="vk-modal-warning-text" data-translate="Hãy đảm bảo bạn đã lưu toàn bộ công việc">Hãy đảm bảo bạn đã lưu toàn bộ công việc</div>
       </div>
 
       <div class="vk-modal-actions">
-        <button id="logout-cancel" class="vk-btn vk-btn-outline">Hủy bỏ</button>
-        <button id="logout-confirm" class="vk-btn vk-btn-danger">Đăng xuất</button>
+        <button id="logout-cancel" class="vk-btn vk-btn-outline" data-translate="Hủy bỏ">Hủy bỏ</button>
+        <button id="logout-confirm" class="vk-btn vk-btn-danger" data-translate="Đăng xuất">Đăng xuất</button>
       </div>
     </div>
   </div>`;

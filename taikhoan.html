@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
@@ -14,15 +14,16 @@
 <body>
     <header></header>
     <script src="./js/header.js"></script>
+    <script src="./js/translator.js"></script>
     <main>
         <div class="container">
             <div class="hero_left">
                 <div class="hero_left-list">
-                    <h2>Tài khoản</h2>
-                    <p>Quản lý thông tin cá nhân của bạn</p>
-                    <a href="taikhoan.html"><img src="/assets/icons/acc.png">Tài khoản</a>
-                    <a href="taikhoansp.html"><img src="/assets/icons/iconsp.png"> Sản phẩm</a>
-                    <a href="#" class="global-logout"><img src="/assets/icons/out.png"> Đăng xuất</a>
+                    <h2 data-translate="Tài khoản">Tài khoản</h2>
+                    <p data-translate="Quản lý thông tin cá nhân của bạn">Quản lý thông tin cá nhân của bạn</p>
+                    <a href="taikhoan.html"><img src="/assets/icons/acc.png"><span data-translate="Tài khoản">Tài khoản</span></a>
+                    <a href="taikhoansp.html"><img src="/assets/icons/iconsp.png"> <span data-translate="Sản phẩm">Sản phẩm</span></a>
+                    <a href="#" class="global-logout"><img src="/assets/icons/out.png"> <span data-translate="Đăng xuất">Đăng xuất</span></a>
 
 
                 </div>
@@ -30,32 +31,32 @@
             <div class="hero_right">
                 <div class="hero_right-info">
                     <div class="hero_right-info-1">
-                        <h2>Chi tiết tài khoản</h2>
-                        <p><img src="/assets/icons/coloracc.png">Tên người dùng</p>
+                        <h2 data-translate="Chi tiết tài khoản">Chi tiết tài khoản</h2>
+                        <p><img src="/assets/icons/coloracc.png"><span data-translate="Tên người dùng">Tên người dùng</span></p>
                     </div>
                     <div class="hero_right-info-2">
                             <div class="form-item">
-                                <p class="label">Họ và tên:</p>
+                                <p class="label" data-translate="Họ và tên">Họ và tên:</p>
                                 <input id="fullName" type="text" placeholder="Họ và tên">
                             </div>
 
                             <div class="form-item">
-                                <p class="label">Tên tài khoản:</p>
+                                <p class="label" data-translate="Tên tài khoản">Tên tài khoản:</p>
                                 <input id="accountName" type="text" placeholder="Tên tài khoản">
                             </div>
 
                             <div class="form-item">
-                                <p class="label">Địa chỉ email:</p>
-                                <input id="email" type="text" placeholder="Địa chỉ email">
+                                <p class="label" data-translate="Email">Email:</p>
+                                <input id="email" type="text" placeholder="Email">
                             </div>
 
                             <div class="form-item">
-                                <p class="label">Số điện thoại:</p>
+                                <p class="label" data-translate="Số điện thoại">Số điện thoại:</p>
                                 <input id="phone" type="text" placeholder="Số điện thoại">
                             </div>
 
                             <div class="form-item">
-                                <button id="saveProfileBtn" class="btn btn-primary">Lưu thông tin</button>
+                                <button id="saveProfileBtn" class="btn btn-primary" data-translate="Lưu thông tin">Lưu thông tin</button>
                             </div>
 
                     </div>

@@ -1,48 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm khách hàng</title>
+    <title data-translate="ĐĂNG BÁN SÁCH">ĐĂNG BÁN SÁCH</title>
     <link rel="stylesheet" href="./styles/add.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
-  </head>
+</head>
 
   <body>
     <header></header>
     <script src="./js/header.js"></script>
+    <script src="./js/translator.js"></script>
 
     <main class="page-add">
       <div class="container">
         <div class="card">
           <div class="card-header">
-            <h1>Thêm khách hàng mới</h1>
-            <a href="manage.html" class="btn btn-ghost">Quay lại</a>
+            <h1 data-translate="ĐĂNG BÁN SÁCH">ĐĂNG BÁN SÁCH</h1>
+            <a href="manage.html" class="btn btn-ghost" data-translate="Quay lại">Quay lại</a>
           </div>
 
           <form id="addForm" class="add-form">
             <div class="row">
-              <label for="name">Họ và tên</label>
+              <label for="name" data-translate="Tiêu đề sách">Tiêu đề sách</label>
               <input
                 type="text"
                 id="name"
                 required
-                placeholder="Nguyễn Văn A"
+                placeholder="Tiêu đề sách"
               />
             </div>
 
             <div class="two-col">
               <div class="col">
-                <label for="phone">Số điện thoại</label>
+                <label for="phone" data-translate="Tác giả">Tác giả</label>
                 <input
                   type="text"
                   id="phone"
                   required
-                  placeholder="0987654321"
+                  placeholder="Tác giả"
                 />
               </div>
               <div class="col">
