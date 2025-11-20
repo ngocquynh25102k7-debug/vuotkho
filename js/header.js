@@ -109,9 +109,9 @@ let headerInnerHTML = `
                     <li class="nav_bar"><a href="trangbaidang.html" class="${isActivePage(
                       "trangbaidang.html"
                     )}">Bài đăng</a></li>
-                    <li class="nav_bar"><a href="timkiem.html" class="${isActivePage(
-                      "timkiem.html"
-                    )}">Giao dịch</a></li>
+                    <li class="nav_bar"><a href="trangnhantin.html" class="${isActivePage(
+                      "trangnhantin.html"
+                    )}">Nhắn tin</a></li>
                 </ul>
             </nav>
             ${authHtml}
