@@ -196,7 +196,7 @@
             newImg.alt = files[i].name;
             newImg.style.width = "200px";
             newImg.style.height = "200px";
-            
+
             newImg.style.objectFit = "cover";
             newImg.style.borderRadius = "8px";
             newImg.style.position = "relative";
@@ -241,7 +241,6 @@
           moreImgDiv.appendChild(newPlusDiv);
               }
               document.querySelector(".kit p").innerText = `${fileName.length}/5`;
-              console.log(fileName);
             };
             divnewImg.appendChild(removeBtn);
             moreImgDiv.appendChild(divnewImg);
@@ -266,8 +265,8 @@
             moreImgDiv.appendChild(plusDiv);
           }
           document.querySelector(".kit p").innerText = `${fileName.length}/5`;
-          console.log(fileName);
-          // Reset the file input to allow selecting the same file again
+  
+        
           fileInput.value = '';
         });
 
@@ -289,11 +288,9 @@
               session.email = session.email || acc.email || "";
               session.phone = session.phone || acc.phone || "";
               session.fullName = session.fullName || acc.fullName || "";
-              // persist updated session so subsequent loads have email/phone
               localStorage.setItem("vk_session", JSON.stringify(session));
             }
           } catch (e) {
-            // ignore parse errors
           }
         }
       })();
