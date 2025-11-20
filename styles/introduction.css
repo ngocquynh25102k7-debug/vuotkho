@@ -1,0 +1,40 @@
+main {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+}
+main .wrapper {
+  max-width: 1440px;
+  margin: auto;
+  background-color: #ffff;
+  width: 100%;
+  padding: 32px 120px;
+}
+main .wrapper h1 {
+font-style: normal;
+font-weight: 800;
+font-size: 36px;
+line-height: 44px;
+color: #000000;
+margin-bottom: 16px;
+text-align: center;
+}
+main .wrapper p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin-bottom: 10px;
+}
+main .wrapper #bottom {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin: 0;
+}
