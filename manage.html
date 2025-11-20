@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quản lý khách hàng</title>
+    <title data-translate="Quản lý khách hàng">Quản lý khách hàng</title>
 
     <link rel="stylesheet" href="./styles/manage.css" />
     <link rel="stylesheet" href="./styles/main.css" />
@@ -19,11 +19,17 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
     />
-  </head>
+      <!-- I18n Library -->
+    <script src="./js/i18n-lite.js"></script>
+    <!-- I18n Library -->
+    <script src="./js/i18n.js"></script>
+    <script src="./js/init-i18n.js"></script>
+</head>
 
   <body>
     <header></header>
     <script src="./js/header.js"></script>
+    <script src="./js/translator.js"></script>
 
     <main>
       <div class="wrapper">
@@ -33,23 +39,23 @@
             <img src="./assets/icons/avatar_admin.png" alt="" />
           </div>
           <div class="user--account">
-            <h1 class="user--admin">Quản lý khách hàng</h1>
-            <p class="text">Quản lý thông tin và trang thái khách hàng</p>
+            <h1 class="user--admin" data-translate="Quản lý khách hàng">Quản lý khách hàng</h1>
+            <p class="text" data-translate="Quản lý thông tin và trạng thái khách hàng">Quản lý thông tin và trạng thái khách hàng</p>
           </div>
         </div>
 
         <!-- STATISTICS BOX -->
         <div class="box--container">
           <div class="box--item border--total">
-            <p>Tổng bài đăng</p>
+            <p data-translate="Tổng bài đăng">Tổng bài đăng</p>
             <p class="count total">25</p>
           </div>
           <div class="box--item border--active">
-            <p>Đã duyệt</p>
+            <p data-translate="Đã duyệt">Đã duyệt</p>
             <p class="count active">15</p>
           </div>
           <div class="box--item border--pending">
-            <p>Chờ duyệt</p>
+            <p data-translate="Chờ duyệt">Chờ duyệt</p>
             <p class="count pending">6</p>
           </div>
           <div class="box--item border--overdue">

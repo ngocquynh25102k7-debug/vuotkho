@@ -11,15 +11,19 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-  </head>
+      <!-- I18n Library -->
+    <script src="./js/i18n.js"></script>
+    <script src="./js/init-i18n.js"></script>
+</head>
 
   <body>
     <header></header>
     <script src="./js/header.js"></script>
+    <script src="./js/translator.js"></script>
     <div class="section">
       <div class="wrapper">
         <div class="wrapper--title">
-          <h1>THÔNG TIN CHI TIẾT</h1>
+          <h1 data-translate="THÔNG TIN CHI TIẾT">THÔNG TIN CHI TIẾT</h1>
         </div>
         <div class="wrapper--content">
           <div class="content--1">
@@ -27,7 +31,7 @@
               <h2>
                 <img
                   src="./assets/icons/trangbaidang/icon-park-outline_add-picture.svg"
-                />Hình ảnh sản phẩm
+                /><span data-translate="Hình ảnh sản phẩm">Hình ảnh sản phẩm</span>
               </h2>
               <div class="kit">
                 <p>0/5</p>
@@ -36,11 +40,11 @@
             <div class="content--1--img">
               <div class="more--img">
                 <a href=""
-                  ><img src="./assets/icons/trangbaidang/Frame 2025 (1).svg"
+                  ><img src="./assets/icons/trangbaidang/Frame 2025 (1)(vn).svg"
                 /></a>
                 <input type="file" name="" id="fileInput" />
               </div>
-              <p>Chỉ hỗ trợ chèn hình ảnh.Tối đa 5 hình ảnh</p>
+              <p data-translate="Chỉ hỗ trợ chèn hình ảnh.Tối đa 5 hình ảnh">Chỉ hỗ trợ chèn hình ảnh.Tối đa 5 hình ảnh</p>
             </div>
           </div>
           <div class="content--2">
@@ -49,32 +53,31 @@
                 <h2>
                   <img
                     src="./assets/icons/trangbaidang/iconoir_page-edit.svg"
-                  />Thông tin sản phẩm
+                  /><span data-translate="Thông tin sản phẩm">Thông tin sản phẩm</span>
                 </h2>
               </div>
               <div class="box--2">
                 <div class="item--1">
                   <h3>
-                    <img src="./assets/icons/trangbaidang/prime_tag.svg" />Tên
-                    sản phẩm
+                    <img src="./assets/icons/trangbaidang/prime_tag.svg" /><span data-translate="Tiêu đề sách">Tiêu đề sách</span>
                   </h3>
-                  <input type="text" placeholder="Tên sản phẩm" />
+                  <input type="text" data-translate="Tiêu đề sách" placeholder="Tiêu đề sách" />
                 </div>
                 <div class="item--2">
                   <div class="in--1">
                     <h3>
                       <img src="./assets/icons/trangbaidang/Vector (8).svg" />
-                      Giá bán
+                      <span data-translate="Giá bán">Giá bán</span>
                     </h3>
-                    <input type="number" placeholder="Giá bán" />
+                    <input type="number" data-translate="Giá bán" placeholder="Giá bán" />
                   </div>
                   <div class="in--1">
                     <h3>
-                      <img src="./assets/icons/trangbaidang/Vector (9).svg" />Số
-                      lượng
+                      <img src="./assets/icons/trangbaidang/Vector (9).svg" /><span data-translate="Số lượng">Số lượng</span>
                     </h3>
                     <input
                       type="number"
+                      data-translate="Số lượng"
                       placeholder="Số lượng"
                       maxlength="9999999"
                     />
@@ -85,11 +88,12 @@
                     <h3>
                       <img
                         src="./assets/icons/trangbaidang/Vector (10).svg"
-                      />Danh mục
+                      /><span data-translate="Thể loại">Thể loại</span>
                     </h3>
                     <input
                       type="text"
-                      placeholder="Danh mục"
+                      data-translate="Thể loại"
+                      placeholder="Thể loại"
                       maxlength="9999999"
                     />
                   </div>
@@ -97,44 +101,46 @@
                     <h3>
                       <img
                         src="./assets/icons/trangbaidang/Vector (11).svg"
-                      />Độ mới
+                      /><span data-translate="Độ mới">Độ mới</span>
                     </h3>
                     <input
                       type="text"
+                      data-translate="Độ mới"
                       placeholder="Độ mới"
                       maxlength="9999999"
                     />
                   </div>
                 </div>
                 <div class="item--3">
-                  <label for="note">Mô tả sản phẩm</label>
+                  <label for="note" data-translate="Mô tả">Mô tả</label>
                   <textarea
                     id="note"
                     name="ghichu"
                     role="5"
                     cols="10"
                     maxlength="9999999"
+                    data-translate="Mô tả chi tiết sản phẩm"
                     placeholder="Mô tả chi tiết sản phẩm"
                   ></textarea>
                 </div>
               </div>
               <div class="box--3">
-                <h4>Lưu ý</h4>
+                <h4 data-translate="Lưu ý">Lưu ý</h4>
                 <ul>
-                  <li>Kiểm tra chính tả và nội dung trước khi đăng.</li>
-                  <li>
+                  <li data-translate="Kiểm tra chính tả và nội dung trước khi đăng.">Kiểm tra chính tả và nội dung trước khi đăng.</li>
+                  <li data-translate="Không sử dụng từ ngữ phản cảm hoặc vi phạm quy định cộng đồng.">
                     Không sử dụng từ ngữ phản cảm hoặc vi phạm quy định cộng
                     đồng.
                   </li>
-                  <li>Hình ảnh phải rõ nét, không chứa logo hoặc watermark.</li>
-                  <li>Không đăng lại cùng một nội dung nhiều lần.</li>
+                  <li data-translate="Hình ảnh phải rõ nét, không chứa logo hoặc watermark.">Hình ảnh phải rõ nét, không chứa logo hoặc watermark.</li>
+                  <li data-translate="Không đăng lại cùng một nội dung nhiều lần.">Không đăng lại cùng một nội dung nhiều lần.</li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="content--3">
-            <a href="">Hủy</a>
-            <a href="">Đăng bài</a>
+            <a href="" data-translate="Hủy">Hủy</a>
+            <a href="" data-translate="Đăng bài">Đăng bài</a>
           </div>
         </div>
       </div>
@@ -159,17 +165,17 @@
           ];
           for (let i = 0; i < files.length; i++) {
             if (!allowedTypes.includes(files[i].type)) {
-              alert("Chỉ hỗ trợ định dạng hình ảnh.");
+              alert(translator.translations[translator.currentLanguage]['Chỉ hỗ trợ định dạng hình ảnh.'] || "Chỉ hỗ trợ định dạng hình ảnh.");
               return;
             }
           }
           if (files.length + fileName.length > 5) {
-            alert("Bạn chỉ có thể tải lên tối đa 5 hình ảnh.");
+            alert(translator.translations[translator.currentLanguage]['Bạn chỉ có thể tải lên tối đa 5 hình ảnh.'] || "Bạn chỉ có thể tải lên tối đa 5 hình ảnh.");
             return;
           }
           for (let i = 0; i < files.length; i++) {
             if (fileName.includes(files[i].name)) {
-              alert("Một hoặc nhiều hình ảnh đã được chọn trước đó.");
+              alert(translator.translations[translator.currentLanguage]['Một hoặc nhiều hình ảnh đã được chọn trước đó.'] || "Một hoặc nhiều hình ảnh đã được chọn trước đó.");
               return;
             }
           }
