@@ -34,7 +34,7 @@
                     <div class="content--1--img">
                         <div class="more--img">
                             <a href="" ><img src="./assets/icons/trangbaidang/Frame 2025 (1).svg"></a>
-                            <input type="file" name="" id="">
+                            <input type="file" name="" id="fileInput">
                         </div>
                         <p>Chỉ hỗ trợ chèn hình ảnh.Tối đa 5 hình ảnh</p>
                     </div>
@@ -98,5 +98,34 @@
     </div>
     <footer></footer>
     <script src="./js/footer.js"></script>
+    <script>
+        let fileName = [];
+        const fileInput = document.getElementById("fileInput");
+        fileInput.addEventListener("change", (event) => {
+            const files = event.target.files;
+            const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/webp', 'image/tiff', 'image/svg+xml', 'image/heic'];
+            for (let i = 0; i < files.length; i++) {
+            if (!allowedTypes.includes(files[i].type)) {
+                alert("Chỉ hỗ trợ định dạng hình ảnh.");
+                return;
+            }
+            }
+            if (files.length + fileName.length > 5) {
+            alert("Bạn chỉ có thể tải lên tối đa 5 hình ảnh.");
+            return;
+            }
+            if(
+            fileName.findIndex(name => name === files[0].name) === -1
+            )
+            {
+            for (let i = 0; i < files.length; i++) {
+                fileName.push(files[i].name);
+            }
+            } else {
+            alert("Hình ảnh đã được chọn trước đó.");
+            }
+            document.querySelector(".kit p").innerText = `${fileName.length}/5`;
+        });
+    </script>
 </body>
 </html>
