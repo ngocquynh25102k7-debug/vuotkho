@@ -127,6 +127,7 @@ if (headerEl) headerEl.innerHTML = headerInnerHTML;
 // attach handlers for user menu and logout
 const userBtn = document.getElementById("user-btn");
 const userMenu = document.getElementById("user-menu");
+userMenu.style.display = "none"
 const logoutBtn = document.getElementById("btn-logout");
 const manageBtn = document.getElementById("manage-account");
 
