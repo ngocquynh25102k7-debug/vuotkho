@@ -6,11 +6,11 @@ let footerInnerHTML = ` <div class="logo">
         <div class="infor">
             <h1>THÔNG TIN</h1>
             <ul>
-                <li class="text"><a href="#">Giới thiệu</a></li>
-                <li class="text"><a href="#">FAQ</a></li>
-                <li class="text"><a href="#">Điều khoản</a></li>
-                <li class="text"><a href="#">Chính sách bảo mật</a></li>
-                <li class="text"><a href="#">Chăm sóc khách hàng</a></li>
+                <li class="text"><a href="introduction.html">Giới thiệu</a></li>
+                <li class="text"><a href="FAQ.html">FAQ</a></li>
+                <li class="text"><a href="clause.html">Điều khoản</a></li>
+                <li class="text"><a href="chinhsachbaomat.html">Chính sách bảo mật</a></li>
+                <li class="text"><a href="support.html">Chăm sóc khách hàng</a></li>
             </ul>
         </div>
         <div class="contact">
