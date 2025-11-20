@@ -179,7 +179,7 @@
           moreImgDiv.style.gap = "12px";
           const tagA = moreImgDiv.querySelector("a");
           if (tagA) {
-            tagA.remove();
+            tagA.style.display = "none";
           }
           const oldplusDiv = document.getElementById("plusDiv");
           if (oldplusDiv) {
@@ -217,30 +217,41 @@
             removeBtn.style.alignItems = "center";
             removeBtn.style.cursor = "pointer";
             removeBtn.onclick = (e) => {
-              const index = fileName.indexOf(e.target.parentElement.querySelector("img").alt);
+              const index = fileName.indexOf(
+                e.target.parentElement.querySelector("img").alt
+              );
               if (index > -1) {
-          fileName.splice(index, 1);
+                fileName.splice(index, 1);
               }
               e.target.parentElement.remove();
               const plusDiv = document.getElementById("plusDiv");
               if (!plusDiv && fileName.length < 5) {
-          const newPlusDiv = document.createElement("div");
-          newPlusDiv.id = "plusDiv";
-          newPlusDiv.style.width = "200px";
-          newPlusDiv.style.height = "200px";
-          newPlusDiv.style.display = "flex";
-          newPlusDiv.style.justifyContent = "center";
-          newPlusDiv.style.alignItems = "center";
-          newPlusDiv.style.border = "2px dashed #C4C4C4";
-          newPlusDiv.style.borderRadius = "8px";
-          newPlusDiv.style.cursor = "pointer";
-          newPlusDiv.innerHTML = `+`;
-          newPlusDiv.onclick = () => {
-            document.getElementById("fileInput").click();
-          };
-          moreImgDiv.appendChild(newPlusDiv);
+                const newPlusDiv = document.createElement("div");
+                newPlusDiv.id = "plusDiv";
+                newPlusDiv.style.width = "200px";
+                newPlusDiv.style.height = "200px";
+                newPlusDiv.style.display = "flex";
+                newPlusDiv.style.justifyContent = "center";
+                newPlusDiv.style.alignItems = "center";
+                newPlusDiv.style.border = "2px dashed #C4C4C4";
+                newPlusDiv.style.borderRadius = "8px";
+                newPlusDiv.style.cursor = "pointer";
+                newPlusDiv.innerHTML = `+`;
+                newPlusDiv.onclick = () => {
+                  document.getElementById("fileInput").click();
+                };
+                moreImgDiv.appendChild(newPlusDiv);
               }
-              document.querySelector(".kit p").innerText = `${fileName.length}/5`;
+              document.querySelector(
+                ".kit p"
+              ).innerText = `${fileName.length}/5`;
+              if (fileName.length === 0) {
+                moreImgDiv.style.display = "block";
+                const tagA = moreImgDiv.querySelector("a");
+                if (tagA) {
+                  tagA.style.display = "block";
+                }
+              }
             };
             divnewImg.appendChild(removeBtn);
             moreImgDiv.appendChild(divnewImg);
@@ -265,9 +276,8 @@
             moreImgDiv.appendChild(plusDiv);
           }
           document.querySelector(".kit p").innerText = `${fileName.length}/5`;
-  
-        
-          fileInput.value = '';
+
+          fileInput.value = "";
         });
 
         if (!session) {
@@ -290,8 +300,7 @@
               session.fullName = session.fullName || acc.fullName || "";
               localStorage.setItem("vk_session", JSON.stringify(session));
             }
-          } catch (e) {
-          }
+          } catch (e) {}
         }
       })();
     </script>
