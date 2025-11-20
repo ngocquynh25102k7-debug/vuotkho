@@ -49,7 +49,7 @@ const authHtml = session
   ? `
     <div class="user-wrapper">
         <div class="user-actions">
-            <button class="icon-circle noti-btn">
+            <button onclick="window.location.href='./trangthongbao.html'" class="icon-circle noti-btn">
                 <img src="./assets/icons/noti.png" alt="notification icon">
             </button>
             <button class="icon-circle user-btn" id="user-btn" aria-haspopup="true" aria-expanded="false">
