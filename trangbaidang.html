@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng bài</title>
-    <link rel="stylesheet" href="./styles/trangbaidang.css">
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/trangbaidang.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header></header>
     <script src="./js/header.js"></script>
     <main>
@@ -99,38 +98,279 @@
                 </div>
             </div>
         </div>
-    </main>
-
+        <div class="wrapper--content">
+          <div class="content--1">
+            <div class="content--1--letter">
+              <h2>
+                <img
+                  src="./assets/icons/trangbaidang/icon-park-outline_add-picture.svg"
+                />Hình ảnh sản phẩm
+              </h2>
+              <div class="kit">
+                <p>0/5</p>
+              </div>
+            </div>
+            <div class="content--1--img">
+              <div class="more--img">
+                <a href=""
+                  ><img src="./assets/icons/trangbaidang/Frame 2025 (1).svg"
+                /></a>
+                <input type="file" name="" id="fileInput" />
+              </div>
+              <p>Chỉ hỗ trợ chèn hình ảnh.Tối đa 5 hình ảnh</p>
+            </div>
+          </div>
+          <div class="content--2">
+            <div class="content--box">
+              <div class="box--1">
+                <h2>
+                  <img
+                    src="./assets/icons/trangbaidang/iconoir_page-edit.svg"
+                  />Thông tin sản phẩm
+                </h2>
+              </div>
+              <div class="box--2">
+                <div class="item--1">
+                  <h3>
+                    <img src="./assets/icons/trangbaidang/prime_tag.svg" />Tên
+                    sản phẩm
+                  </h3>
+                  <input type="text" placeholder="Tên sản phẩm" />
+                </div>
+                <div class="item--2">
+                  <div class="in--1">
+                    <h3>
+                      <img src="./assets/icons/trangbaidang/Vector (8).svg" />
+                      Giá bán
+                    </h3>
+                    <input type="number" placeholder="Giá bán" />
+                  </div>
+                  <div class="in--1">
+                    <h3>
+                      <img src="./assets/icons/trangbaidang/Vector (9).svg" />Số
+                      lượng
+                    </h3>
+                    <input
+                      type="number"
+                      placeholder="Số lượng"
+                      maxlength="9999999"
+                    />
+                  </div>
+                </div>
+                <div class="item--2">
+                  <div class="in--1">
+                    <h3>
+                      <img
+                        src="./assets/icons/trangbaidang/Vector (10).svg"
+                      />Danh mục
+                    </h3>
+                    <input
+                      type="text"
+                      placeholder="Danh mục"
+                      maxlength="9999999"
+                    />
+                  </div>
+                  <div class="in--1">
+                    <h3>
+                      <img
+                        src="./assets/icons/trangbaidang/Vector (11).svg"
+                      />Độ mới
+                    </h3>
+                    <input
+                      type="text"
+                      placeholder="Độ mới"
+                      maxlength="9999999"
+                    />
+                  </div>
+                </div>
+                <div class="item--3">
+                  <label for="note">Mô tả sản phẩm</label>
+                  <textarea
+                    id="note"
+                    name="ghichu"
+                    role="5"
+                    cols="10"
+                    maxlength="9999999"
+                    placeholder="Mô tả chi tiết sản phẩm"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="box--3">
+                <h4>Lưu ý</h4>
+                <ul>
+                  <li>Kiểm tra chính tả và nội dung trước khi đăng.</li>
+                  <li>
+                    Không sử dụng từ ngữ phản cảm hoặc vi phạm quy định cộng
+                    đồng.
+                  </li>
+                  <li>Hình ảnh phải rõ nét, không chứa logo hoặc watermark.</li>
+                  <li>Không đăng lại cùng một nội dung nhiều lần.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="content--3">
+            <a href="">Hủy</a>
+            <a href="">Đăng bài</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer></footer>
     <script src="./js/footer.js"></script>
     <script>
+      (function () {
         let fileName = [];
         const fileInput = document.getElementById("fileInput");
         fileInput.addEventListener("change", (event) => {
-            const files = event.target.files;
-            const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/webp', 'image/tiff', 'image/svg+xml', 'image/heic'];
-            for (let i = 0; i < files.length; i++) {
-                if (!allowedTypes.includes(files[i].type)) {
-                    alert("Chỉ hỗ trợ định dạng hình ảnh.");
-                    return;
-                }
+          const files = event.target.files;
+          const allowedTypes = [
+            "image/jpeg",
+            "image/png",
+            "image/gif",
+            "image/bmp",
+            "image/webp",
+            "image/tiff",
+            "image/svg+xml",
+            "image/heic",
+          ];
+          for (let i = 0; i < files.length; i++) {
+            if (!allowedTypes.includes(files[i].type)) {
+              alert("Chỉ hỗ trợ định dạng hình ảnh.");
+              return;
             }
-            if (files.length + fileName.length > 5) {
-                alert("Bạn chỉ có thể tải lên tối đa 5 hình ảnh.");
-                return;
+          }
+          if (files.length + fileName.length > 5) {
+            alert("Bạn chỉ có thể tải lên tối đa 5 hình ảnh.");
+            return;
+          }
+          for (let i = 0; i < files.length; i++) {
+            if (fileName.includes(files[i].name)) {
+              alert("Một hoặc nhiều hình ảnh đã được chọn trước đó.");
+              return;
             }
-            if (
-                fileName.findIndex(name => name === files[0].name) === -1
-            ) {
-                for (let i = 0; i < files.length; i++) {
-                    fileName.push(files[i].name);
-                }
-            } else {
-                alert("Hình ảnh đã được chọn trước đó.");
-            }
-            document.querySelector(".kit p").innerText = `${fileName.length}/5`;
-        });
-    </script>
-</body>
+          }
+          const moreImgDiv = document.querySelector(".more--img");
+          moreImgDiv.style.display = "flex";
+          moreImgDiv.style.alignItems = "center";
+          moreImgDiv.style.gap = "12px";
+          const tagA = moreImgDiv.querySelector("a");
+          if (tagA) {
+            tagA.remove();
+          }
+          const oldplusDiv = document.getElementById("plusDiv");
+          if (oldplusDiv) {
+            oldplusDiv.remove();
+          }
+          for (let i = 0; i < files.length; i++) {
+            fileName.push(files[i].name);
+            const divnewImg = document.createElement("div");
+            divnewImg.style.display = "inline-flex";
+            divnewImg.style.position = "relative";
 
+            const newImg = document.createElement("img");
+            newImg.src = URL.createObjectURL(files[i]);
+            newImg.alt = files[i].name;
+            newImg.style.width = "200px";
+            newImg.style.height = "200px";
+
+            newImg.style.objectFit = "cover";
+            newImg.style.borderRadius = "8px";
+            newImg.style.position = "relative";
+            divnewImg.appendChild(newImg);
+
+            const removeBtn = document.createElement("div");
+            removeBtn.innerText = "x";
+            removeBtn.style.position = "absolute";
+            removeBtn.style.top = "2px";
+            removeBtn.style.right = "6px";
+            removeBtn.style.backgroundColor = "rgba(0,0,0,0.5)";
+            removeBtn.style.color = "white";
+            removeBtn.style.borderRadius = "50%";
+            removeBtn.style.width = "20px";
+            removeBtn.style.height = "20px";
+            removeBtn.style.display = "flex";
+            removeBtn.style.justifyContent = "center";
+            removeBtn.style.alignItems = "center";
+            removeBtn.style.cursor = "pointer";
+            removeBtn.onclick = (e) => {
+              const index = fileName.indexOf(e.target.parentElement.querySelector("img").alt);
+              if (index > -1) {
+          fileName.splice(index, 1);
+              }
+              e.target.parentElement.remove();
+              const plusDiv = document.getElementById("plusDiv");
+              if (!plusDiv && fileName.length < 5) {
+          const newPlusDiv = document.createElement("div");
+          newPlusDiv.id = "plusDiv";
+          newPlusDiv.style.width = "200px";
+          newPlusDiv.style.height = "200px";
+          newPlusDiv.style.display = "flex";
+          newPlusDiv.style.justifyContent = "center";
+          newPlusDiv.style.alignItems = "center";
+          newPlusDiv.style.border = "2px dashed #C4C4C4";
+          newPlusDiv.style.borderRadius = "8px";
+          newPlusDiv.style.cursor = "pointer";
+          newPlusDiv.innerHTML = `+`;
+          newPlusDiv.onclick = () => {
+            document.getElementById("fileInput").click();
+          };
+          moreImgDiv.appendChild(newPlusDiv);
+              }
+              document.querySelector(".kit p").innerText = `${fileName.length}/5`;
+            };
+            divnewImg.appendChild(removeBtn);
+            moreImgDiv.appendChild(divnewImg);
+          }
+          const tagInput = moreImgDiv.querySelector("input");
+          tagInput.style.zIndex = "-100";
+          if (fileName.length < 5) {
+            const plusDiv = document.createElement("div");
+            plusDiv.id = "plusDiv";
+            plusDiv.style.width = "200px";
+            plusDiv.style.height = "200px";
+            plusDiv.style.display = "flex";
+            plusDiv.style.justifyContent = "center";
+            plusDiv.style.alignItems = "center";
+            plusDiv.style.border = "2px dashed #C4C4C4";
+            plusDiv.style.borderRadius = "8px";
+            plusDiv.style.cursor = "pointer";
+            plusDiv.innerHTML = `+`;
+            plusDiv.onclick = () => {
+              document.getElementById("fileInput").click();
+            };
+            moreImgDiv.appendChild(plusDiv);
+          }
+          document.querySelector(".kit p").innerText = `${fileName.length}/5`;
+  
+        
+          fileInput.value = '';
+        });
+
+        if (!session) {
+          window.location.href = "dangnhap.html";
+          return;
+        }
+        if (session && (!session.email || !session.phone)) {
+          try {
+            const accounts = JSON.parse(
+              localStorage.getItem("vk_accounts") || "[]"
+            );
+            const acc = accounts.find(
+              (a) =>
+                a.id == session.accountId ||
+                a.accountName === session.accountName
+            );
+            if (acc) {
+              session.email = session.email || acc.email || "";
+              session.phone = session.phone || acc.phone || "";
+              session.fullName = session.fullName || acc.fullName || "";
+              localStorage.setItem("vk_session", JSON.stringify(session));
+            }
+          } catch (e) {
+          }
+        }
+      })();
+    </script>
+  </body>
 </html>
