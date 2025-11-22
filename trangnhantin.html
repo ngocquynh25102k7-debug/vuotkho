@@ -7,6 +7,8 @@
     <title>Nhắn tin</title>
     <link rel="stylesheet" href="./styles/trangnhantin.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,7 +17,6 @@
 </head>
 
 <body>
-    <script src="./js/translator.js"></script>
     <main>
         <div class="section">
             <div class="wrapper">
@@ -294,12 +295,12 @@
 
         const inputMes = document.getElementById("inputMes");
         inputMes.addEventListener("keydown", (e) => {
-            if(e.key == 'Enter'){
-               submitBtn.click();
+            if (e.key == 'Enter') {
+                submitBtn.click();
             }
         })
-
     </script>
+    <script src="./js/translator.js"></script>
 </body>
 
 </html>
