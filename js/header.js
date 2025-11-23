@@ -35,12 +35,12 @@ const LOGOUT_ICON = (() => {
 
 // button text/link for unauthenticated users
 const unauthButtonText =
-  currentPage === "index.html" || currentPage === "dangky.html"
+  currentPage === "index.html" || currentPage === "register.html"
     ? "Đăng Nhập"
     : "Đăng Ký";
 const unauthButtonLink = unauthButtonText.includes("Đăng Nhập")
-  ? "./dangnhap.html"
-  : "./dangky.html";
+  ? "./login.html"
+  : "./register.html";
 
 const isActivePage = (pageName) => (currentPage === pageName ? "active" : "");
 
