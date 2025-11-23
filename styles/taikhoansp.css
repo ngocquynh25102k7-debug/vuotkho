@@ -135,6 +135,9 @@
     .item--img {
         width: 247px;
         height: 226px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: #DDDBE8;
     }
 

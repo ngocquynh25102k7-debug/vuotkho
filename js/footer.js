@@ -31,8 +31,4 @@ let footerInnerHTML = ` <div class="logo">
             </ul>
         </div>
 `;
-const footerLinkTagCSS = `<link rel="stylesheet" href="./styles/footer.css">`
-
-document.head.innerHTML += footerLinkTagCSS;
-
 document.getElementsByTagName("footer")[0].innerHTML = footerInnerHTML;

@@ -35,12 +35,12 @@ const LOGOUT_ICON = (() => {
 
 // button text/link for unauthenticated users
 const unauthButtonText =
-  currentPage === "index.html" || currentPage === "dangky.html"
+  currentPage === "index.html" || currentPage === "register.html"
     ? "Đăng Nhập"
     : "Đăng Ký";
 const unauthButtonLink = unauthButtonText.includes("Đăng Nhập")
-  ? "./dangnhap.html"
-  : "./dangky.html";
+  ? "./login.html"
+  : "./register.html";
 
 const isActivePage = (pageName) => (currentPage === pageName ? "active" : "");
 
@@ -118,8 +118,6 @@ let headerInnerHTML = `
         </div>
     </div>`;
 
-const headerLinkTagCSS = `<link rel="stylesheet" href="./styles/header.css">`;
-document.head.insertAdjacentHTML("beforeend", headerLinkTagCSS);
 
 const headerEl = document.body.getElementsByTagName("header")[0];
 if (headerEl) headerEl.innerHTML = headerInnerHTML;
@@ -127,7 +125,9 @@ if (headerEl) headerEl.innerHTML = headerInnerHTML;
 // attach handlers for user menu and logout
 const userBtn = document.getElementById("user-btn");
 const userMenu = document.getElementById("user-menu");
-userMenu.style.display = "none"
+if(userMenu){
+  userMenu.style.display = "none"
+}
 const logoutBtn = document.getElementById("btn-logout");
 const manageBtn = document.getElementById("manage-account");
 

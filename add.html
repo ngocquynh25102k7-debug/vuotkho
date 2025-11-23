@@ -1,87 +1,73 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate="ĐĂNG BÁN SÁCH">ĐĂNG BÁN SÁCH</title>
-    <link rel="stylesheet" href="./styles/add.css">
-    <link rel="stylesheet" href="./styles/main.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-translate="ĐĂNG BÁN SÁCH">ĐĂNG BÁN SÁCH</title>
+  <link rel="stylesheet" href="./styles/add.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/header.css" />
+  <link rel="stylesheet" href="./styles/footer.css" />
 </head>
 
-  <body>
-    <header></header>
-    <script src="./js/header.js"></script>
-    <script src="./js/translator.js"></script>
+<body>
+  <header></header>
 
-    <main class="page-add">
-      <div class="container">
-        <div class="card">
-          <div class="card-header">
-            <h1 data-translate="ĐĂNG BÁN SÁCH">ĐĂNG BÁN SÁCH</h1>
-            <a href="manage.html" class="btn btn-ghost" data-translate="Quay lại">Quay lại</a>
+
+  <main class="page-add">
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h1 data-translate="ĐĂNG BÁN SÁCH">ĐĂNG BÁN SÁCH</h1>
+          <a href="manage.html" class="btn btn-ghost" data-translate="Quay lại">Quay lại</a>
+        </div>
+
+        <form id="addForm" class="add-form">
+          <div class="row">
+            <label for="name" data-translate="Tiêu đề sách">Tiêu đề sách</label>
+            <input type="text" id="name" required placeholder="Tiêu đề sách" />
           </div>
 
-          <form id="addForm" class="add-form">
-            <div class="row">
-              <label for="name" data-translate="Tiêu đề sách">Tiêu đề sách</label>
-              <input
-                type="text"
-                id="name"
-                required
-                placeholder="Tiêu đề sách"
-              />
+          <div class="two-col">
+            <div class="col">
+              <label for="phone" data-translate="Tác giả">Tác giả</label>
+              <input type="text" id="phone" required placeholder="Tác giả" />
             </div>
+            <div class="col">
+              <label for="status">Trạng thái</label>
+              <select id="status">
+                <option value="active">Đang hoạt động</option>
+                <option value="pending">Chờ duyệt</option>
+                <option value="overdue">Hết hạn</option>
+              </select>
+            </div>
+          </div>
 
-            <div class="two-col">
-              <div class="col">
-                <label for="phone" data-translate="Tác giả">Tác giả</label>
-                <input
-                  type="text"
-                  id="phone"
-                  required
-                  placeholder="Tác giả"
-                />
-              </div>
-              <div class="col">
-                <label for="status">Trạng thái</label>
-                <select id="status">
-                  <option value="active">Đang hoạt động</option>
-                  <option value="pending">Chờ duyệt</option>
-                  <option value="overdue">Hết hạn</option>
-                </select>
-              </div>
+          <div class="two-col">
+            <div class="col">
+              <label for="startDate">Ngày đăng ký</label>
+              <input type="date" id="startDate" required />
             </div>
+            <div class="col">
+              <label for="endDate">Ngày hết hạn</label>
+              <input type="date" id="endDate" required />
+            </div>
+          </div>
 
-            <div class="two-col">
-              <div class="col">
-                <label for="startDate">Ngày đăng ký</label>
-                <input type="date" id="startDate" required />
-              </div>
-              <div class="col">
-                <label for="endDate">Ngày hết hạn</label>
-                <input type="date" id="endDate" required />
-              </div>
-            </div>
-
-            <div class="actions">
-              <button type="submit" class="btn btn-primary">
-                Lưu khách hàng
-              </button>
-            </div>
-          </form>
-        </div>
+          <div class="actions">
+            <button type="submit" class="btn btn-primary">
+              Lưu khách hàng
+            </button>
+          </div>
+        </form>
       </div>
-    </main>
+    </div>
+  </main>
+  <script src="./js/add.js"></script>
+    <script src="./js/header.js"></script>
+  <script src="./js/translator.js"></script>
+</body>
 
-    <!-- Firebase SDK (needed if you want remote/shared storage) -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
-    <script src="./js/firebase.js"></script>
-    <script src="./js/firebase-config.js"></script>
-    <script src="./js/add.js"></script>
-  </body>
 </html>
